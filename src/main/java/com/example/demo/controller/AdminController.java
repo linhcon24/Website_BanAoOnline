@@ -12,12 +12,20 @@ public class AdminController {
     public String getAdmin() {
         return "admin/dashboard";
     }
+
     @GetMapping("/tables")
     public String getTables() {
         return "admin/tables";
     }
+
     @GetMapping("/charts")
     public String getCharts() {
         return "admin/charts";
     }
+
+    @GetMapping("/403")
+    public String get403(){
+        return "403";
+    }
+
 }
