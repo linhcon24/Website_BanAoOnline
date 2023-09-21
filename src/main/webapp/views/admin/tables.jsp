@@ -1,21 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="Website Icon" type="png" href="../../views/img/logotitle.png">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Tables Page</title>
+    <title>Admin Tables</title>
 
     <!-- Custom fonts for this template -->
-    <link href="${pageContext.request.contextPath}/views/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
-          type="text/css">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
@@ -24,8 +23,7 @@
     <link href="${pageContext.request.contextPath}/views/admin/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="${pageContext.request.contextPath}/views/admin/vendor/datatables/dataTables.bootstrap4.min.css"
-          rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -42,7 +40,7 @@
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">Admin <sup>2</sup></div>
+            <div class="sidebar-brand-text mx-3"> Admin <sup>2</sup></div>
         </a>
 
         <!-- Divider -->
@@ -276,40 +274,37 @@
                             </h6>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                    <img class="rounded-circle" src="../views/admin/img/undraw_profile_1.svg"
                                          alt="...">
                                     <div class="status-indicator bg-success"></div>
                                 </div>
                                 <div class="font-weight-bold">
                                     <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                        problem I've been having.
-                                    </div>
+                                        problem I've been having.</div>
                                     <div class="small text-gray-500">Emily Fowler Â· 58m</div>
                                 </div>
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                    <img class="rounded-circle" src="../views/admin/img/undraw_profile_2.svg"
                                          alt="...">
                                     <div class="status-indicator"></div>
                                 </div>
                                 <div>
                                     <div class="text-truncate">I have the photos that you ordered last month, how
-                                        would you like them sent to you?
-                                    </div>
+                                        would you like them sent to you?</div>
                                     <div class="small text-gray-500">Jae Chun Â· 1d</div>
                                 </div>
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="img/undraw_profile_3"
+                                    <img class="rounded-circle" src="../views/admin/img/undraw_profile_3.svg"
                                          alt="...">
                                     <div class="status-indicator bg-warning"></div>
                                 </div>
                                 <div>
                                     <div class="text-truncate">Last month's report looks great, I am very happy with
-                                        the progress so far, keep up the good work!
-                                    </div>
+                                        the progress so far, keep up the good work!</div>
                                     <div class="small text-gray-500">Morgan Alvarez Â· 2d</div>
                                 </div>
                             </a>
@@ -321,8 +316,7 @@
                                 </div>
                                 <div>
                                     <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                        told me that people say this to all dogs, even if they aren't good...
-                                    </div>
+                                        told me that people say this to all dogs, even if they aren't good...</div>
                                     <div class="small text-gray-500">Chicken the Dog Â· 2w</div>
                                 </div>
                             </a>
@@ -338,7 +332,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                             <img class="img-profile rounded-circle"
-                                 src="../../views/admin/img/undraw_profile.svg>
+                                 src="../views/admin/img/undraw_profile.svg">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -375,8 +369,7 @@
                 <h1 class="h3 mb-2 text-gray-800">Tables</h1>
                 <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                     For more information about DataTables, please visit the <a target="_blank"
-                                                                               href="https://datatables.net">official
-                        DataTables documentation</a>.</p>
+                                                                               href="https://datatables.net">official DataTables documentation</a>.</p>
 
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
@@ -688,22 +681,6 @@
                                     <td>$324,050</td>
                                 </tr>
                                 <tr>
-                                    <td>Unity Butler</td>
-                                    <td>Marketing Designer</td>
-                                    <td>San Francisco</td>
-                                    <td>47</td>
-                                    <td>2009/12/09</td>
-                                    <td>$85,675</td>
-                                </tr>
-                                <tr>
-                                    <td>Howard Hatfield</td>
-                                    <td>Office Manager</td>
-                                    <td>San Francisco</td>
-                                    <td>51</td>
-                                    <td>2008/12/16</td>
-                                    <td>$164,500</td>
-                                </tr>
-                                <tr>
                                     <td>Hope Fuentes</td>
                                     <td>Secretary</td>
                                     <td>San Francisco</td>
@@ -807,62 +784,8 @@
                                     <td>2013/02/01</td>
                                     <td>$75,650</td>
                                 </tr>
-                                <tr>
-                                    <td>Cara Stevens</td>
-                                    <td>Sales Assistant</td>
-                                    <td>New York</td>
-                                    <td>46</td>
-                                    <td>2011/12/06</td>
-                                    <td>$145,600</td>
-                                </tr>
-                                <tr>
-                                    <td>Hermione Butler</td>
-                                    <td>Regional Director</td>
-                                    <td>London</td>
-                                    <td>47</td>
-                                    <td>2011/03/21</td>
-                                    <td>$356,250</td>
-                                </tr>
-                                <tr>
-                                    <td>Lael Greer</td>
-                                    <td>Systems Administrator</td>
-                                    <td>London</td>
-                                    <td>21</td>
-                                    <td>2009/02/27</td>
-                                    <td>$103,500</td>
-                                </tr>
-                                <tr>
-                                    <td>Jonas Alexander</td>
-                                    <td>Developer</td>
-                                    <td>San Francisco</td>
-                                    <td>30</td>
-                                    <td>2010/07/14</td>
-                                    <td>$86,500</td>
-                                </tr>
-                                <tr>
-                                    <td>Shad Decker</td>
-                                    <td>Regional Director</td>
-                                    <td>Edinburgh</td>
-                                    <td>51</td>
-                                    <td>2008/11/13</td>
-                                    <td>$183,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                    <td>29</td>
-                                    <td>2011/06/27</td>
-                                    <td>$183,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                    <td>27</td>
-                                    <td>2011/01/25</td>
-                                    <td>$112,000</td>
-                                </tr>
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -879,7 +802,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2020</span>
+                    <span>Copyright &copy; <a style="color: #858796" href="https://www.facebook.com/linh.con.33449/">Nguyen Linh</a></span>
                 </div>
             </div>
         </footer>
@@ -910,7 +833,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login">Logout</a>
+                <a class="btn btn-primary" href="login.html">Logout</a>
             </div>
         </div>
     </div>
