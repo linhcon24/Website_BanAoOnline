@@ -13,7 +13,7 @@
 
     <title>Admin Page</title>
 
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template-->/**/
     <link href="${pageContext.request.contextPath}/views/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
           type="text/css">
     <link
