@@ -52,6 +52,24 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+
+      -->
+
+        <!-- taglibs-standard-spec-*.jar -->
+        <!-- http://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-spec -->
+ <!--       <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-spec</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        &lt;!&ndash; taglibs-standard-impl-*.jar &ndash;&gt;
+        &lt;!&ndash; http://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-impl &ndash;&gt;
+        <dependency>
+            <groupId>org.apache.taglibs</groupId>
+            <artifactId>taglibs-standard-impl</artifactId>
+            <version>1.2.5</version>
+        </dependency>-->
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
             <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
@@ -61,7 +79,13 @@
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <version>2.0.0</version>
-        </dependency>-->
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
