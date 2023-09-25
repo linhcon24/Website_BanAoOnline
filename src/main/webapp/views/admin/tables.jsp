@@ -13,6 +13,9 @@
 
     <title>Admin Tables</title>
 
+    <script src="https://kit.fontawesome.com/999051c9de.js"
+            crossorigin="anonymous"></script>
+
     <!-- Custom fonts for this template -->
     <link href="${pageContext.request.contextPath}/views/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
