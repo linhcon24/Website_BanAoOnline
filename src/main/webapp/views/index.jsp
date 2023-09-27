@@ -43,6 +43,17 @@
  <%--   <footer>
         <jsp:include page="_footer.jsp"></jsp:include>
     </footer>--%>
+<%--<script type="text/javascript">--%>
+<%--    var message = document.getElementById("message").value;--%>
+<%--    var type = document.getElementById("type").value;--%>
+<%--    console.log(message);--%>
+
+<%--    if(message != ""){--%>
+<%--        console.log("ok");--%>
+<%--        Swal.fire(message, '', type);--%>
+<%--    }--%>
+
+<%--</script>--%>
 </body>
 
 </html>

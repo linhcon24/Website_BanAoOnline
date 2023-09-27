@@ -29,8 +29,20 @@ public class HomePage {
         return "register";
     }
 
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
+
     @GetMapping("/forget")
     public String forget() {
         return "forget";
     }
+
+    @GetMapping("/change")
+    public String change() {
+        return "change";
+    }
+
+
 }
