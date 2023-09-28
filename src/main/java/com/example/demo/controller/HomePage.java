@@ -11,7 +11,7 @@ public class HomePage {
     @RequestMapping(value = {"", "/", "/index", "/home"})
     public String homePage(Model model) {
         model.addAttribute("mess", "Hello Ha");
-        return "index";
+        return "homePage";
     }
 
     @GetMapping("/403")
@@ -21,27 +21,27 @@ public class HomePage {
 
     @GetMapping("/login")
     public String login() {
-        return "login";
+        return "loginPage";
     }
 
     @GetMapping("/register")
     public String register() {
-        return "register";
+        return "registerPage";
     }
 
     @GetMapping("/contact")
     public String contact() {
-        return "contact";
+        return "contactPage";
     }
 
     @GetMapping("/forget")
     public String forget() {
-        return "forget";
+        return "forgetPage";
     }
 
     @GetMapping("/change")
     public String change() {
-        return "change";
+        return "changePage";
     }
 
 

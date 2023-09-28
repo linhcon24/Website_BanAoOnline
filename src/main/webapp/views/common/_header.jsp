@@ -1,4 +1,4 @@
-<%--
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
@@ -7,7 +7,7 @@
     
 <header>
     <nav class="navbar navbar-expand-lg navbar-light nav">
-      <a class="navbar-brand" href="index"><img class="logo" src="${pageContext.request.contextPath}/views/img/5.png"></a>
+      <a class="navbar-brand" href="index"><img class="logo" src="${pageContext.request.contextPath}/views/img/1.gif"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,7 +49,7 @@
   <div class="dropdown-menu drop" aria-labelledby="dropdownMenuLink">
     <div class="nutdrop">
     <a class="dropdown-item" href="${pageContext.request.contextPath}/change">Đổi mật khẩu</a>
-&lt;%&ndash;         <a class="dropdown-item" href="${pageContext.request.contextPath}/myorder"><s:message code="label.home.myorder"></s:message></a> &ndash;%&gt;
+&lt;%&ndash;         <a class="dropdown-item" href="${pageContext.request.contextPath}/myorder">Test</a> &ndash;%&gt;
     <a class="dropdown-item" href="#" onclick="dangXuat()">Logout</a>
     </div>
   </div>
@@ -92,4 +92,4 @@
     			})
 		}
     	
-    </script>--%>
+    </script>
