@@ -27,7 +27,12 @@
         crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/views/css/contact.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/views/css/style.css">
 <script src="./views/js/contact.js"></script>
+
+<br>
+<h1 class="giua"><i class="fa-solid fa-phone"></i>Contact</h1>
+<br>
 <section class="content-page">
     <div class="container">
         <div class="row">

@@ -16,7 +16,7 @@
 	<definition name="baseAD.definition" template="/views/admin/commons/layout.jsp">
 		<put-attribute name="title-admin" value="" />
 		<put-attribute name="header-admin" value="/views/admin/commons/_header-admin.jsp" />
-		<put-attribute name="sidebar" value="/views/admin/commons/_sidebar.jsp" />
+		<put-attribute name="sidebar-admin" value="/views/admin/commons/_sidebar.jsp" />
 		<put-attribute name="body-admin" value="" />
 		<put-attribute name="footer-admin" value="/views/admin/commons/_footer-admin.jsp" />
 	</definition>
@@ -68,10 +68,10 @@
 			value="/views/change.jsp" />
 	</definition>
 	
-	<definition name="cartPage" extends="base.definition">
-		<put-attribute name="title" value="Cart Page" />
+	<definition name="contactPage" extends="base.definition">
+		<put-attribute name="title" value="Contact Page" />
 		<put-attribute name="body"
-			value="/views/cart.jsp" />
+			value="/views/contact.jsp" />
 	</definition>
 
 
@@ -84,33 +84,33 @@
 	</definition>
 
 	<definition name="adminTH" extends="baseAD.definition">
-		<put-attribute name="title-admin" value="Admin Product Page" />
+		<put-attribute name="title-admin" value="Admin Thương Hiệu Page" />
 		<put-attribute name="body-admin"
 			value="/views/admin/thuonghieu/thuong-hieu.jsp" />
 	</definition>
 	
-	<definition name="adminProductAdd" extends="base.definition">
-		<put-attribute name="title" value="Admin Product Add" />
-		<put-attribute name="body"
-			value="/views/admin/addProduct.jsp" />
+	<definition name="adminTHAdd" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Thương Hiệu Add" />
+		<put-attribute name="body-admin"
+			value="/views/admin/thuonghieu/addTH.jsp" />
 	</definition>
 	
-	<definition name="adminProductUpdate" extends="base.definition">
-		<put-attribute name="title" value="Admin Product Update" />
-		<put-attribute name="body"
-			value="/views/admin/updateProduct.jsp" />
+	<definition name="adminTHUpdate" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Thương Hiệu Update" />
+		<put-attribute name="body-admin"
+			value="/views/admin/thuonghieu/updateTH.jsp" />
 	</definition>
 	
-	<definition name="UserPage" extends="base.definition">
-		<put-attribute name="title" value="Admin User Page" />
-		<put-attribute name="body"
-			value="/views/users/index.jsp" />
+	<definition name="tablePage" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Table Page" />
+		<put-attribute name="body-admin"
+			value="/views/admin/tables.jsp" />
 	</definition>
 	
-		<definition name="UserPageAdd" extends="base.definition">
-		<put-attribute name="title" value="Admin User Add" />
-		<put-attribute name="body"
-			value="/views/users/addUser.jsp"/>
+		<definition name="chartPage" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Chart Add" />
+		<put-attribute name="body-admin"
+			value="/views/admin/charts.jsp"/>
 	</definition>
 	
 	<definition name="UserPageUpdate" extends="base.definition">

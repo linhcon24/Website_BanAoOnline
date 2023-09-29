@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                         <div class="logo-widget footer-widget">
-                            <figure class="logo-box"><a href="#"><img src="${pageContext.request.contextPath}/views/img/logotitle.png"></a></figure>
+                            <figure class="logo-box"><a href="#"><img src="${pageContext.request.contextPath}/views/img/logotitle1.png"></a></figure>
                             <div class="text">
                                 <p>       Here you can use rows and columns to organize your footer content. Lorem ipsum
               dolor sit amet, consectetur adipisicing elit.</p>

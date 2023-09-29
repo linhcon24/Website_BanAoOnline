@@ -15,17 +15,18 @@ public class AdminController {
 
     @GetMapping("/tables")
     public String getTables() {
-        return "admin/tables";
+        return "tablePage";
     }
 
     @GetMapping("/charts")
     public String getCharts() {
-        return "admin/charts";
+        return "chartPage";
     }
 
     @GetMapping("/403")
     public String get403(){
         return "403";
     }
+
 
 }
