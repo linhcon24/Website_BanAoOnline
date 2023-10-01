@@ -5,13 +5,13 @@ import lombok.*;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity
-@Table(name = "chatlieu")
-@ToString
-public class ChatLieu {
-
-}
+//@Setter
+//@Getter
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Entity
+//@Table(name = "chatlieu")
+//@ToString
+//public class ChatLieu {
+//
+//}
