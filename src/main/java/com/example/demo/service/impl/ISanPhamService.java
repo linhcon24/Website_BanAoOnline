@@ -41,15 +41,15 @@ public class ISanPhamService implements SanPhamService {
 
     @Override
     public SanPham update(SanPham sanPham) {
-        SanPham sp = repository.getById(sanPham.getIdSanPham());
-        sp.setTenSanPham(sanPham.getTenSanPham());
+        SanPham sp = repository.getById(sanPham.getIdsanpham());
+        sp.setTensanpham(sanPham.getTensanpham());
         return repository.save(sp);
     }
 
     @Override
     public SanPham delete(SanPham sanPham) {
-        SanPham sp = repository.getById(sanPham.getIdSanPham());
-        sp.setTrangThai(1);
+        SanPham sp = repository.getById(sanPham.getIdsanpham());
+        sp.setTrangthai(1);
         return repository.save(sp);
     }
 

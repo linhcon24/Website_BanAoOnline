@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,20 +13,19 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "sanpham")
+@Table(name = "loaikhuyenmai")
 @ToString
-public class SanPham implements Serializable {
+public class LoaiKhuyenMai implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idsanpham;
-    private String masanpham;
-    private String tensanpham;
+    private Integer idloaikhuyenmai;
+    private String maloaikhuyenmai;
+    private String tenloaikhuyenmai;
     private Date ngaytao;
     private Date ngaycapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+    @OneToMany(mappedBy = "loaiKhuyenMai", fetch = FetchType.LAZY)
+    private List<KhuyenMai> khuyenMais;
 }
-

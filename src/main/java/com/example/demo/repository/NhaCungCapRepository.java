@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public interface NhaCungCapRepository extends JpaRepository<NhaCungCap, Integer> {
 
-    @Query(value = "Select e from NhaCungCap e where e.trangThai = 0")
+    @Query(value = "Select e from NhaCungCap e where e.trangthai = 0")
     Page<NhaCungCap> phantrang(Pageable pageable);
-    @Query("Select e from NhaCungCap e where e.trangThai = 0")
+    @Query("Select e from NhaCungCap e where e.trangthai = 0")
     List<NhaCungCap> countPhanTrang();
 }

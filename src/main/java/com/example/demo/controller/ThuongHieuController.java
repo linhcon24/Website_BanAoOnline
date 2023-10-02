@@ -33,7 +33,7 @@ public class ThuongHieuController {
         Integer count1 = Math.round(count.size() % pageSize) == 0 ? Math.round(count.size() / pageSize)
                 : Math.round(count.size() / pageSize) + 1;
         model.addAttribute("count", count1);
-        list.toString();
+//        list.toString();
         return "adminTH";
     }
 

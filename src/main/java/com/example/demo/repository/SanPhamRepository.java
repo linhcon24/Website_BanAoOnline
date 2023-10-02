@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public interface SanPhamRepository extends JpaRepository<SanPham, Integer> {
 
-    @Query(value = "Select e from SanPham e where e.trangThai= 0")
+    @Query(value = "Select e from SanPham e where e.trangthai= 0")
     Page<SanPham> phantrang(Pageable pageable);
-    @Query("Select e from SanPham e where e.trangThai = 0")
+    @Query("Select e from SanPham e where e.trangthai = 0")
     List<SanPham> countPhanTrang();
 }

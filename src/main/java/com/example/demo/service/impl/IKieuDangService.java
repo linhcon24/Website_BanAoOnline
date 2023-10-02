@@ -41,15 +41,15 @@ public class IKieuDangService implements KieuDangService {
 
     @Override
     public KieuDang update(KieuDang kieuDang) {
-        KieuDang kd = repository.getById(kieuDang.getIdKieuDang());
-        kd.setTenKieuDang(kieuDang.getTenKieuDang());
+        KieuDang kd = repository.getById(kieuDang.getIdkieudang());
+        kd.setTenkieudang(kieuDang.getTenkieudang());
         return repository.save(kd);
     }
 
     @Override
     public KieuDang delete(KieuDang kieuDang) {
-        KieuDang kd = repository.getById(kieuDang.getIdKieuDang());
-        kd.setTrangThai(1);
+        KieuDang kd = repository.getById(kieuDang.getIdkieudang());
+        kd.setTrangthai(1);
         return repository.save(kd);
     }
 

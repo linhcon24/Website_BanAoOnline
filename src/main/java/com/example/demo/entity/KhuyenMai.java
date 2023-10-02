@@ -13,23 +13,27 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "anh")
+@Table(name = "khuyenmai")
 @ToString
-public class Anh implements Serializable {
+public class KhuyenMai implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID idimage;
-    private String tenimage;
-    private String imageurl1;
-    private String imageurl2;
-    private String imageurl3;
-    private String imageurl4;
+    private UUID idkhuyenmai;
+    private String makhuyenmai;
+    private String tenkhuyenmai;
+    private String mota;
+    private Integer chietkhau;
     private Date ngaytao;
     private Date ngaycapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "anh", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "khuyenMai" ,fetch = FetchType.LAZY)
     private List<ChiTietSanPham> chiTietSanPhams;
-}
 
+    @ManyToOne
+    @JoinColumn(name = "idloaikhuyenmai")
+    private LoaiKhuyenMai loaiKhuyenMai;
+
+
+}

@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public interface KieuDangRepository extends JpaRepository<KieuDang, Integer> {
 
-    @Query(value = "Select e from KieuDang e where e.trangThai = 0")
+    @Query(value = "Select e from KieuDang e where e.trangthai = 0")
     Page<KieuDang> phantrang(Pageable pageable);
-    @Query("Select e from KieuDang e where e.trangThai = 0")
+    @Query("Select e from KieuDang e where e.trangthai = 0")
     List<KieuDang> countPhanTrang();
 }

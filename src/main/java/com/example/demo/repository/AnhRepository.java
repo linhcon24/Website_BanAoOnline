@@ -13,8 +13,8 @@ import java.util.UUID;
 @Repository
 public interface AnhRepository extends JpaRepository<Anh, UUID> {
 
-    @Query(value = "Select e from Anh e where e.trangThai = 0")
+    @Query(value = "Select e from Anh e where e.trangthai = 0")
     Page<Anh> phantrang(Pageable pageable);
-    @Query("Select e from Anh e where e.trangThai = 0")
+    @Query("Select e from Anh e where e.trangthai = 0")
     List<Anh> countPhanTrang();
 }

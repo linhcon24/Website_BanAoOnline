@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public interface KichThuocRepository extends JpaRepository<KichThuoc, Integer> {
 
-    @Query(value = "Select e from KichThuoc e where e.trangThai = 0")
+    @Query(value = "Select e from KichThuoc e where e.trangthai = 0")
     Page<KichThuoc> phantrang(Pageable pageable);
-    @Query("Select e from KichThuoc e where e.trangThai = 0")
+    @Query("Select e from KichThuoc e where e.trangthai = 0")
     List<KichThuoc> countPhanTrang();
 }

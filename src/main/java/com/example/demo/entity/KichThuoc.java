@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Setter
 @Getter
@@ -17,10 +18,13 @@ public class KichThuoc implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idKichThuoc;
-    private String tenKichThuoc;
-    private Date ngayTao;
-    private Date ngayCapNhat;
-    private Integer trangThai;
+    private Integer idkichthuoc;
+    private String tenkichthuoc;
+    private Date ngaytao;
+    private Date ngaycapnhat;
+    private Integer trangthai;
+
+    @OneToMany(mappedBy = "kichThuoc" ,fetch = FetchType.LAZY)
+    private List<ChiTietSanPham> chiTietSanPhams;
 }
 

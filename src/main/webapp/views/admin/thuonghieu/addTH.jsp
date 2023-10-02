@@ -23,7 +23,7 @@
         <f:input type="text" class="form-control" id="exampleInputEmail1" name="tenthuonghieu" path="tenthuonghieu"/>
         <f:errors style="color:red" path="tenthuonghieu" element="div"></f:errors>
         <br>
-        <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Thêm</button>
+        <button type="submit" class="btn btn-info"><i class="fa-solid fa-plus"></i> Thêm</button>
 
     </f:form>
 </div>

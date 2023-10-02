@@ -41,15 +41,15 @@ public class IChatLieuService implements ChatLieuService {
 
     @Override
     public ChatLieu update(ChatLieu chatLieu) {
-        ChatLieu cl = repository.getById(chatLieu.getIdChatLieu());
-        cl.setTenChatLieu(chatLieu.getTenChatLieu());
+        ChatLieu cl = repository.getById(chatLieu.getIdchatlieu());
+        cl.setTenchatlieu(chatLieu.getTenchatlieu());
         return repository.save(cl);
     }
 
     @Override
     public ChatLieu delete(ChatLieu chatLieu) {
-        ChatLieu cl = repository.getById(chatLieu.getIdChatLieu());
-        cl.setTrangThai(1);
+        ChatLieu cl = repository.getById(chatLieu.getIdchatlieu());
+        cl.setTrangthai(1);
         return repository.save(cl);
     }
 

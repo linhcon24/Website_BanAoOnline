@@ -41,15 +41,15 @@ public class IMauSacService implements MauSacService {
 
     @Override
     public MauSac update(MauSac mauSac) {
-        MauSac ms = repository.getById(mauSac.getIdMauSac());
-        ms.setTenMauSac(mauSac.getTenMauSac());
+        MauSac ms = repository.getById(mauSac.getIdmausac());
+        ms.setTenmausac(mauSac.getTenmausac());
         return repository.save(ms);
     }
 
     @Override
     public MauSac delete(MauSac mauSac) {
-        MauSac ms = repository.getById(mauSac.getIdMauSac());
-        ms.setTrangThai(1);
+        MauSac ms = repository.getById(mauSac.getIdmausac());
+        ms.setTrangthai(1);
         return repository.save(ms);
     }
 

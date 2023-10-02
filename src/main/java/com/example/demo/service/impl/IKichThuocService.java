@@ -41,15 +41,15 @@ public class IKichThuocService implements KichThuocService {
 
     @Override
     public KichThuoc update(KichThuoc kichThuoc) {
-        KichThuoc kt = repository.getById(kichThuoc.getIdKichThuoc());
-        kt.setTenKichThuoc(kt.getTenKichThuoc());
+        KichThuoc kt = repository.getById(kichThuoc.getIdkichthuoc());
+        kt.setTenkichthuoc(kt.getTenkichthuoc());
         return repository.save(kt);
     }
 
     @Override
     public KichThuoc delete(KichThuoc kichThuoc) {
-        KichThuoc kt = repository.getById(kichThuoc.getIdKichThuoc());
-        kt.setTrangThai(1);
+        KichThuoc kt = repository.getById(kichThuoc.getIdkichthuoc());
+        kt.setTrangthai(1);
         return repository.save(kt);
     }
 

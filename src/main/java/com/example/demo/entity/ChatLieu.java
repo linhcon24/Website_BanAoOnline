@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Setter
 @Getter
@@ -17,9 +18,12 @@ public class ChatLieu implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idChatLieu;
-    private String tenChatLieu;
-    private Date ngayTao;
-    private Date ngayCapNhat;
-    private Integer trangThai;
+    private Integer idchatlieu;
+    private String tenchatlieu;
+    private Date ngaytao;
+    private Date ngaycapnhat;
+    private Integer trangthai;
+
+    @OneToMany(mappedBy = "chatLieu", fetch = FetchType.LAZY)
+    private List<ChiTietSanPham> chiTietSanPhams;
 }

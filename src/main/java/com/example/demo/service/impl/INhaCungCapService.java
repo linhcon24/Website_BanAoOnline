@@ -41,15 +41,15 @@ public class INhaCungCapService implements NhaCungCapService {
 
     @Override
     public NhaCungCap update(NhaCungCap nhaCungCap) {
-        NhaCungCap ncc = repository.getById(nhaCungCap.getIdNhaCungCap());
-        ncc.setTenNhaCungCap(nhaCungCap.getTenNhaCungCap());
+        NhaCungCap ncc = repository.getById(nhaCungCap.getIdnhacungcap());
+        ncc.setTennhacungcap(nhaCungCap.getTennhacungcap());
         return repository.save(ncc);
     }
 
     @Override
     public NhaCungCap delete(NhaCungCap nhaCungCap) {
-        NhaCungCap ncc = repository.getById(nhaCungCap.getIdNhaCungCap());
-        ncc.setTrangThai(1);
+        NhaCungCap ncc = repository.getById(nhaCungCap.getIdnhacungcap());
+        ncc.setTrangthai(1);
         return repository.save(ncc);
     }
 

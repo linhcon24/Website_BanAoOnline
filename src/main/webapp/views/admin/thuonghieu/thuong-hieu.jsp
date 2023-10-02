@@ -42,10 +42,10 @@
                 <td>${p.idthuonghieu}</td>
                 <td>${p.tenthuonghieu}</td>
                 <td>
-                    <button type="button" class="btn btn-danger btnSua"><a
+                    <button type="button" class="btn btn-warning btnSua"><a
                             href="${pageContext.request.contextPath}/admin/thuong-hieu/update/${p.idthuonghieu }"><i
                             class="fa-solid fa-wrench"></i> Sửa</a></button>
-                    <button type="button" class="btn btn-warning btnSua"><a
+                    <button type="button" class="btn btn-danger btnSua"><a
                             href="${pageContext.request.contextPath}/admin/thuong-hieu/delete/${p.idthuonghieu }"><i
                             class="fa-solid fa-trash"></i> Xóa</a></button>
                 </td>

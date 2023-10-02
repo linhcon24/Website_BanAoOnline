@@ -18,6 +18,8 @@ public class DonDatHang implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idDonDatHang;
+    private Integer iddondathang;
+
+
 
 }

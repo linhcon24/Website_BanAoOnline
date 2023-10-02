@@ -42,15 +42,15 @@ public class IAnhService implements AnhService {
 
     @Override
     public Anh update(Anh anh) {
-        Anh a = repository.getById(anh.getIdAnh());
-        a.setTenAnh(a.getTenAnh());
+        Anh a = repository.getById(anh.getIdimage());
+        a.setIdimage(a.getIdimage());
         return repository.save(a);
     }
 
     @Override
     public Anh delete(Anh anh) {
-        Anh a = repository.getById(anh.getIdAnh());
-        a.setTrangThai(1);
+        Anh a = repository.getById(anh.getIdimage());
+        a.setTrangthai(1);
         return repository.save(a);
     }
 

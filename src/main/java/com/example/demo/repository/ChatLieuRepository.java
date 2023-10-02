@@ -12,8 +12,8 @@ import java.util.List;
 @Repository
 public interface ChatLieuRepository extends JpaRepository<ChatLieu, Integer> {
 
-    @Query(value = "Select e from ChatLieu e where e.trangThai = 0")
+    @Query(value = "Select e from ChatLieu e where e.trangthai = 0")
     Page<ChatLieu> phantrang(Pageable pageable);
-    @Query("Select e from ChatLieu e where e.trangThai = 0")
+    @Query("Select e from ChatLieu e where e.trangthai = 0")
     List<ChatLieu> countPhanTrang();
 }
