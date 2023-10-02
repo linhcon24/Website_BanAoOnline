@@ -11,15 +11,17 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "chatlieu")
+@Table(name = "sanpham")
 @ToString
-public class ChatLieu implements Serializable {
+public class SanPham implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idChatLieu;
-    private String tenChatLieu;
+    private Integer idSanPham;
+    private String maSanPham;
+    private String tenSanPham;
     private Date ngayTao;
     private Date ngayCapNhat;
     private Integer trangThai;
 }
+
