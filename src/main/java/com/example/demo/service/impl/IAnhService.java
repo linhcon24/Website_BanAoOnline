@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class IAnhService implements AnhService {
@@ -30,7 +31,7 @@ public class IAnhService implements AnhService {
     }
 
     @Override
-    public Optional<Anh> getById(Integer id) {
+    public Optional<Anh> getById(UUID id) {
         return repository.findById(id);
     }
 
@@ -54,7 +55,7 @@ public class IAnhService implements AnhService {
     }
 
     @Override
-    public Anh getByIdA(Integer id) {
+    public Anh getByIdA(UUID id) {
         return repository.getById(id);
     }
 }

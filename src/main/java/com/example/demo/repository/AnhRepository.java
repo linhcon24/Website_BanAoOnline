@@ -8,9 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Repository
-public interface AnhRepository extends JpaRepository<Anh, Integer> {
+public interface AnhRepository extends JpaRepository<Anh, UUID> {
 
     @Query(value = "Select e from Anh e where e.trangThai = 0")
     Page<Anh> phantrang(Pageable pageable);
