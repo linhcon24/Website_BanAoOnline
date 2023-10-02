@@ -31,6 +31,16 @@
                     <a class="chu-m" href="${pageContext.request.contextPath}/contact"><i class="fa-solid fa-phone"></i>
                         Liên hệ</a>
                 </li>
+                <li>
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <input id="search-input" type="search" id="form1" class="form-control" placeholder="Tìm kiếm..."/>
+                        </div>
+                        <button id="search-button" type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </li>
 
                 <c:if test="${account.role ==0 }">
                     <li class="nav-item menu">
@@ -120,3 +130,11 @@
 <%--		}--%>
 <%--    	--%>
 <%--    </script>--%>
+    <script>
+        const searchButton = document.getElementById('search-button');
+        const searchInput = document.getElementById('search-input');
+        searchButton.addEventListener('click', () => {
+        const inputValue = searchInput.value;
+        alert(inputValue);
+        });
+    </script>
