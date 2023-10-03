@@ -6,6 +6,8 @@
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-light nav">
+
+
         <a class="navbar-brand" href="index"><img class="logo"
                                                   src="${pageContext.request.contextPath}/views/img/logotitle.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -14,96 +16,99 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item menu">
-                    <a class="chu-m" href="${pageContext.request.contextPath}/index"><i class="fa-solid fa-house"></i>
-                        Trang chủ<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item menu">
-                    <a class="chu-m" href="${pageContext.request.contextPath}/product"><i
-                            class="fa-brands fa-shopify"></i> Sản Phẩm</a>
-                </li>
-                <li class="nav-item menu">
-                    <a class="chu-m" href="${pageContext.request.contextPath}/info"><i
-                            class="fa-solid fa-circle-info"></i> Giới thiệu</a>
-                </li>
-                <li class="nav-item menu">
-                    <a class="chu-m" href="${pageContext.request.contextPath}/contact"><i class="fa-solid fa-phone"></i>
-                        Liên hệ</a>
-                </li>
-                <li>
-                    <div class="input-group">
-                        <div class="form-outline">
-                            <input id="search-input" type="search" id="form1" class="form-control" placeholder="Tìm kiếm..."/>
-                        </div>
-                        <button id="search-button" type="button" class="btn btn-primary">
-                            <i class="fas fa-search"></i>
-                        </button>
+            <div class="col-sm-8">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item menu">
+                        <a class="chu-m" href="${pageContext.request.contextPath}/index"><i class="fa-solid fa-house"></i>
+                            Trang chủ<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item menu">
+                        <a class="chu-m" href="${pageContext.request.contextPath}/product"><i
+                                class="fa-brands fa-shopify"></i> Sản Phẩm</a>
+                    </li>
+                    <li class="nav-item menu">
+                        <a class="chu-m" href="${pageContext.request.contextPath}/info"><i
+                                class="fa-solid fa-circle-info"></i> Giới thiệu</a>
+                    </li>
+                    <li class="nav-item menu">
+                        <a class="chu-m" href="${pageContext.request.contextPath}/contact"><i class="fa-solid fa-phone"></i>
+                            Liên hệ</a>
+                    </li>
+
+
+                    <c:if test="${account.role ==0 }">
+                        <li class="nav-item menu">
+                            <a class="chu-m" href="${pageContext.request.contextPath}/admin/dashboard"><i
+                                    class="fa-solid fa-gears"></i> Quản Trị</a>
+                        </li>
+                        <li class="nav-item menu">
+                            <a class="chu-m" href="${pageContext.request.contextPath}/admin/products"><i
+                                    class="fa-brands fa-product-hunt"></i></a>
+                        </li>
+                        <li class="nav-item menu">
+                            <a class="chu-m" href="${pageContext.request.contextPath}/users/user"><i
+                                    class="fa-solid fa-users-gear"></i></a>
+                        </li>
+                    </c:if>
+
+
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <div class="button-cangiua">
+                    <!--  <button class="nut"><a class="nav-link menu" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></button>https://s2.o7planning.com/templates/o7planning/resources/images/languages/vi.png -->
+                    <div style="margin-left: 65px"><a style="color: white" href="?language=vi"><img style="width: 20px"
+                                                                                                    src="${pageContext.request.contextPath }/views/img/co-viet-nam.png"></a>
+                        | <a style="color: white" href="?language=en"> <img style="width: 20px" alt=""
+                                                                            src="https://s2.o7planning.com/templates/o7planning/resources/images/languages/en.png">
+                        </a></div>
+                    <button class="nut"><a class="nav-link menu" href="${pageContext.request.contextPath }/cart"><i
+                            class="fa-solid fa-cart-plus"></i>
+                        <p class="soluong"></p></a>
+
+                    </button>
+                    <button class="nuthan dropdown show">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user"></i> Hi,<!--  , --><c:if
+                                test="${account != null }"> ${account.username}</c:if>
+                            <c:if test="${account == null }">khách</c:if>
+                        </a>
+                        <c:choose>
+                            <c:when test="${account != null }">
+                                <div class="dropdown-menu drop" aria-labelledby="dropdownMenuLink">
+                                    <div class="nutdrop">
+                                        <a class="dropdown-item" href="${pageContext.request.contextPath}/change">Đổi mật
+                                            khẩu</a>
+                                        &lt;%&ndash; <a class="dropdown-item"
+                                                        href="${pageContext.request.contextPath}/myorder">Test</a> &ndash;%&gt;
+                                        <a class="dropdown-item" href="#" onclick="dangXuat()">Logout</a>
+                                    </div>
+                                </div>
+                            </c:when>
+                            <c:otherwise>
+                                <div class="dropdown-menu drop" aria-labelledby="dropdownMenuLink">
+                                    <div class="nutdrop">
+                                        <a class="dropdown-item" href="${pageContext.request.contextPath}/login">Login</a>
+                                        <a class="dropdown-item"
+                                           href="${pageContext.request.contextPath}/register">Register</a>
+                                        <a class="dropdown-item" href="${pageContext.request.contextPath}/forget">Forget</a>
+                                    </div>
+                                </div>
+                            </c:otherwise>
+                        </c:choose>
+
+                    </button>
+
+                </div>
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input id="search-input" type="search" id="form1" class="form-control " placeholder="Tìm kiếm..."/>
                     </div>
-                </li>
-
-                <c:if test="${account.role ==0 }">
-                    <li class="nav-item menu">
-                        <a class="chu-m" href="${pageContext.request.contextPath}/admin/dashboard"><i
-                                class="fa-solid fa-gears"></i> Quản Trị</a>
-                    </li>
-                    <li class="nav-item menu">
-                        <a class="chu-m" href="${pageContext.request.contextPath}/admin/products"><i
-                                class="fa-brands fa-product-hunt"></i></a>
-                    </li>
-                    <li class="nav-item menu">
-                        <a class="chu-m" href="${pageContext.request.contextPath}/users/user"><i
-                                class="fa-solid fa-users-gear"></i></a>
-                    </li>
-                </c:if>
-
-
-            </ul>
-            <div class="button-cangiua">
-                <!--  <button class="nut"><a class="nav-link menu" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></button>https://s2.o7planning.com/templates/o7planning/resources/images/languages/vi.png -->
-                <div style="margin-left: 65px"><a style="color: white" href="?language=vi"><img style="width: 20px"
-                                                                                                src="${pageContext.request.contextPath }/views/img/co-viet-nam.png"></a>
-                    | <a style="color: white" href="?language=en"> <img style="width: 20px" alt=""
-                                                                        src="https://s2.o7planning.com/templates/o7planning/resources/images/languages/en.png">
-                    </a></div>
-                <button class="nut"><a class="nav-link menu" href="${pageContext.request.contextPath }/cart"><i
-                        class="fa-solid fa-cart-plus"></i>
-                    <p class="soluong"></p></a>
-
-                </button>
-                <button class="nuthan dropdown show">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        <i class="fa-solid fa-user"></i> Hi,<!--  , --><c:if
-                            test="${account != null }"> ${account.username}</c:if>
-                        <c:if test="${account == null }">khách</c:if>
-                    </a>
-                    <c:choose>
-                        <c:when test="${account != null }">
-                            <div class="dropdown-menu drop" aria-labelledby="dropdownMenuLink">
-                                <div class="nutdrop">
-                                    <a class="dropdown-item" href="${pageContext.request.contextPath}/change">Đổi mật
-                                        khẩu</a>
-                                    &lt;%&ndash; <a class="dropdown-item"
-                                                    href="${pageContext.request.contextPath}/myorder">Test</a> &ndash;%&gt;
-                                    <a class="dropdown-item" href="#" onclick="dangXuat()">Logout</a>
-                                </div>
-                            </div>
-                        </c:when>
-                        <c:otherwise>
-                            <div class="dropdown-menu drop" aria-labelledby="dropdownMenuLink">
-                                <div class="nutdrop">
-                                    <a class="dropdown-item" href="${pageContext.request.contextPath}/login">Login</a>
-                                    <a class="dropdown-item"
-                                       href="${pageContext.request.contextPath}/register">Register</a>
-                                    <a class="dropdown-item" href="${pageContext.request.contextPath}/forget">Forget</a>
-                                </div>
-                            </div>
-                        </c:otherwise>
-                    </c:choose>
-
-                </button>
-
+                    <button id="search-button" type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
