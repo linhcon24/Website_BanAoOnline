@@ -14,7 +14,7 @@
 <h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Ảnh</h1>
 <br>
 <div class="btnThem">
-    <button type="button" class="btn btn-info"><a href="${pageContext.request.contextPath }/admin/anh/add"><i
+    <button type="button" class="btn btn-info"><a href="${pageContext.request.contextPath }/admin/anhs/add"><i
             class="fa-solid fa-circle-plus"></i> Thêm Ảnh</a></button>
 </div>
 <br>
@@ -27,7 +27,7 @@
     </tr>
 
     <%--        <c:set value="0" var="i" scope="page"></c:set>--%>
-    <c:forEach items="${list}" var="p">
+    <c:forEach items="${listAnh}" var="p">
         <%--            <c:set value="${i+1 }" var="i" scope="page" ></c:set>--%>
         <c:if test="${p.trangthai == 0 }">
             <tr>
@@ -36,10 +36,10 @@
                 <td>${p.tenimage}</td>
                 <td>
                     <button type="button" class="btn btn-danger btnSua"><a
-                            href="${pageContext.request.contextPath}/admin/anh/update/${p.idimage }"><i
+                            href="${pageContext.request.contextPath}/admin/anhs/update/${p.idimage }"><i
                             class="fa-solid fa-wrench"></i> Sửa</a></button>
                     <button type="button" class="btn btn-warning btnSua"><a
-                            href="${pageContext.request.contextPath}/admin/anh/delete/${p.idimage }"><i
+                            href="${pageContext.request.contextPath}/admin/anhs/delete/${p.idimage }"><i
                             class="fa-solid fa-trash"></i> Xóa</a></button>
                 </td>
             </tr>

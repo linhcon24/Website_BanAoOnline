@@ -100,7 +100,64 @@
 		<put-attribute name="body-admin"
 			value="/views/admin/thuonghieu/updateTH.jsp" />
 	</definition>
-	
+
+	<definition name="adminAnh" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Ảnh Page" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/anh/anhs.jsp" />
+	</definition>
+
+	<definition name="adminAnhAdd" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Ảnh Add" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/anh/addAnh.jsp" />
+	</definition>
+
+	<definition name="adminAnhUpdate" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Ảnh Update" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/anh/updateAnh.jsp" />
+	</definition>
+
+	<definition name="adminCL" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Ảnh Page" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/chatlieu/chat-lieu.jsp" />
+	</definition>
+
+	<definition name="adminCLAdd" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Chất Liệu Add" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/chatlieu/addCL.jsp" />
+	</definition>
+
+	<definition name="adminCLUpdate" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Chất Liệu Update" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/chatlieu/updateCL.jsp" />
+	</definition>
+
+
+	<definition name="adminKT" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Kích Thước Page" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/kichthuoc/kich-thuoc.jsp" />
+	</definition>
+
+	<definition name="adminKTAdd" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Kích Thước Add" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/kichthuoc/addKT.jsp" />
+	</definition>
+
+	<definition name="adminKTUpdate" extends="baseAD.definition">
+		<put-attribute name="title-admin" value="Admin Kích Thước Update" />
+		<put-attribute name="body-admin"
+					   value="/views/admin/kichthuoc/updateKT.jsp" />
+	</definition>
+
+
+
 	<definition name="tablePage" extends="baseAD.definition">
 		<put-attribute name="title-admin" value="Admin Table Page" />
 		<put-attribute name="body-admin"

@@ -7,7 +7,7 @@
 <div class="container">
     <h1> Sửa Ảnh</h1>
     <%--@elvariable id="anh" type=""--%>
-    <f:form action="${pageContext.request.contextPath}/admin/anh/update" method="POST" modelAttribute="anh">
+    <f:form action="${pageContext.request.contextPath}/admin/anhs/update" method="POST" modelAttribute="anh">
         <f:input type="hidden" class="form-control" id="exampleInputEmail1" name="idimage"
                  value="${anh1.idimage }" path="idimage"/>
         <label for="exampleInputEmail1"> Tên <span style="color:red">*</span> :</label>

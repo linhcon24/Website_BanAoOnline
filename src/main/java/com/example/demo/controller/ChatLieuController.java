@@ -18,13 +18,13 @@ public class ChatLieuController {
 
     @Autowired
     private ChatLieuService service;
+
     @GetMapping()
     public String showCL(Model model, @RequestParam(name = "pageNum", defaultValue = "1") Integer pageNum){
         Integer pageSize = 5;
         List<ChatLieu> list = service.getAll(pageNum - 1, pageSize).getContent();
         List<ChatLieu> count = service.count();
-        model.addAttribute("list", list);
-        System.out.println(list.toString());
+        model.addAttribute("listCL", list);
         Integer count1 = Math.round(count.size() % pageSize) == 0 ? Math.round(count.size() / pageSize)
                 : Math.round(count.size() / pageSize) + 1;
         model.addAttribute("count", count1);

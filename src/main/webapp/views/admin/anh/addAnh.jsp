@@ -9,7 +9,7 @@
     <h1> Thêm Ảnh</h1>
     <p style="color: red">${message }</p>
     <%--@elvariable id="anh" type=""--%>
-    <f:form modelAttribute="anh" action="${pageContext.request.contextPath}/admin/anh/add" method="POST"
+    <f:form modelAttribute="anh" action="${pageContext.request.contextPath}/admin/anhs/add" method="POST"
             enctype="multipart/form-data">
 
         <label for="exampleInputEmail1"> Tên <span style="color:red">*</span> :</label>
@@ -32,6 +32,7 @@
         <label for="exampleInputEmail1"> Đường dẫn 4 <span style="color:red">*</span> :</label>
         <f:input type="text" class="form-control" id="exampleInputEmail1" name="imageurl4" path="imageurl4"/>
         <f:errors style="color:red" path="imageurl4" element="div"></f:errors>
+        <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Thêm</button>
 
     </f:form>

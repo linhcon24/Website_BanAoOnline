@@ -10,7 +10,7 @@
 
 
 <br>
-<%--<c:if test="${account.role == 0 }">--%>Liệu
+<%--<c:if test="${account.role == 0 }">--%>
 <h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Chất Liệu</h1>
 <br>
 <div class="btnThem">
@@ -27,7 +27,7 @@
     </tr>
 
     <%--        <c:set value="0" var="i" scope="page"></c:set>--%>
-    <c:forEach items="${list}" var="p">
+    <c:forEach items="${listCL}" var="p">
         <%--            <c:set value="${i+1 }" var="i" scope="page" ></c:set>--%>
         <c:if test="${p.trangthai == 0 }">
             <tr>

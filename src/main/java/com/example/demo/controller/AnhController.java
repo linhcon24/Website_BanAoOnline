@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("/admin/anh")
+@RequestMapping("/admin/anhs")
 public class AnhController {
 
     @Autowired
@@ -25,8 +25,7 @@ public class AnhController {
         Integer pageSize = 5;
         List<Anh> list = service.getAll(pageNum - 1, pageSize).getContent();
         List<Anh> count = service.count();
-        model.addAttribute("list", list);
-        System.out.println(list.toString());
+        model.addAttribute("listAnh", list);
         Integer count1 = Math.round(count.size() % pageSize) == 0 ? Math.round(count.size() / pageSize)
                 : Math.round(count.size() / pageSize) + 1;
         model.addAttribute("count", count1);
@@ -48,7 +47,7 @@ public class AnhController {
             if (service.add(anh) != null) {
                 redirect.addFlashAttribute("message", "Thêm thành công !");
                 redirect.addFlashAttribute("type", "success");
-                return "redirect:/admin/anh";
+                return "redirect:/admin/anhs";
             }
         }
         return "adminAnhAdd";
@@ -70,7 +69,7 @@ public class AnhController {
             if (service.update(a) != null) {
                 redirect.addFlashAttribute("message", "Sửa thành công !");
                 redirect.addFlashAttribute("type", "success");
-                return "redirect:/admin/anh";
+                return "redirect:/admin/anhs";
             }
         }
         return "adminAnhUpdate";
@@ -81,7 +80,7 @@ public class AnhController {
         if (service.delete(anh) != null) {
             redirect.addFlashAttribute("message", "Xóa thành công !");
             redirect.addFlashAttribute("type", "success");
-            return "redirect:/admin/anh";
+            return "redirect:/admin/anhs";
         }
         return "adminAnh";
     }
