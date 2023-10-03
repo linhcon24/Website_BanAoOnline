@@ -30,6 +30,8 @@
         <%--            <td>#</td>--%>
         <td>ID</td>
         <td>Tên Thương Hiệu</td>
+            <td>Ngày Tạo</td>
+            <td>Ngày Cập Nhật</td>
         <td>Chức năng</td>
     </tr>
 
@@ -41,6 +43,8 @@
                     <%--                    <td>${i }</td>--%>
                 <td>${p.idthuonghieu}</td>
                 <td>${p.tenthuonghieu}</td>
+                   <td>${p.ngaytao}</td>
+                        <td>${p.ngaycapnhat}</td>
                 <td>
                     <button type="button" class="btn btn-warning btnSua"><a
                             href="${pageContext.request.contextPath}/admin/thuong-hieu/update/${p.idthuonghieu }"><i

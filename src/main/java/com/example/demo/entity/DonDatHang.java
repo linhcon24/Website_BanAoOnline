@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -26,8 +27,12 @@ public class DonDatHang implements Serializable {
     private String nguoinhan;
     private Double phiship;
     private Double tongtien;
-    private Timestamp ngaytao;
-    private Timestamp ngaycapnhat;
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date ngaytao;
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date ngaycapnhat;
     private Integer trangthai;
 
     @ManyToOne
