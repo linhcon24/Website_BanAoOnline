@@ -5,7 +5,6 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,23 +13,23 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "anh")
+@Table(name = "giohang")
 @ToString
-public class Anh implements Serializable {
+public class GioHang implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID idimage;
-    private String tenimage;
-    private String imageurl1;
-    private String imageurl2;
-    private String imageurl3;
-    private String imageurl4;
+    private UUID idgiohang;
     private Timestamp ngaytao;
     private Timestamp ngaycapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "anh", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
-}
+    @ManyToOne
+    @JoinColumn(name = "idtaikhoan")
+    private TaiKhoan taiKhoan;
 
+    @OneToMany(mappedBy = "gioHang",fetch = FetchType.LAZY)
+    private List<GioHangChiTiet> gioHangChiTiets;
+
+
+}

@@ -6,25 +6,29 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
-import java.util.List;
+import java.util.UUID;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "chatlieu")
+@Table(name = "danhgiasanpham")
 @ToString
-public class ChatLieu implements Serializable {
+public class DanhGiaSanPham implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idchatlieu;
-    private String tenchatlieu;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID iddanhgia;
+    private String madanhgia;
+    private String noidung;
     private Timestamp ngaytao;
     private Timestamp ngaycapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "chatLieu", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+    @ManyToOne
+    @JoinColumn(name = "idsanpham")
+    private SanPham sanPham;
+
+
 }

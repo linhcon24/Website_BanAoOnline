@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -24,8 +25,10 @@ public class KhuyenMai implements Serializable {
     private String tenkhuyenmai;
     private String mota;
     private Integer chietkhau;
-    private Date ngaytao;
-    private Date ngaycapnhat;
+    private Timestamp ngaybatdau;
+    private Timestamp ngayketthuc;
+    private Timestamp ngaytao;
+    private Timestamp ngaycapnhat;
     private Integer trangthai;
 
     @OneToMany(mappedBy = "khuyenMai" ,fetch = FetchType.LAZY)

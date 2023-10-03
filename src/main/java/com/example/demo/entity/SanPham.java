@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -21,11 +22,22 @@ public class SanPham implements Serializable {
     private Integer idsanpham;
     private String masanpham;
     private String tensanpham;
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date ngaytao;
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date ngaycapnhat;
     private Integer trangthai;
 
     @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
     private List<ChiTietSanPham> chiTietSanPhams;
+
+    @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
+    private List<DanhGiaSanPham> danhGiaSanPhams;
+
+
+
+
 }
 

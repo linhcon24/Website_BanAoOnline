@@ -5,7 +5,9 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Setter
@@ -25,8 +27,8 @@ public class ChiTietSanPham implements Serializable {
     private String mota;
     private Integer soluong;
     private Integer giamgia;
-    private Date ngaytao;
-    private Date ngaycapnhat;
+    private Timestamp ngaytao;
+    private Timestamp ngaycapnhat;
     private Integer trangthai;
 
     @ManyToOne
@@ -65,7 +67,11 @@ public class ChiTietSanPham implements Serializable {
     @JoinColumn(name = "idimage")
     private Anh anh;
 
+    @OneToMany(mappedBy = "chiTietSanPham", fetch = FetchType.LAZY)
+    private List<GioHangChiTiet> gioHangChiTiets;
 
+    @OneToMany(mappedBy = "chiTietSanPham", fetch = FetchType.LAZY)
+    private List<ChiTietDonDatHang> chiTietDonDatHangs;
 
 
 }

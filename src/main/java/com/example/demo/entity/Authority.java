@@ -1,30 +1,34 @@
 package com.example.demo.entity;
 
+
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.Date;
-import java.util.List;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "chatlieu")
+@Table(name = "authority")
 @ToString
-public class ChatLieu implements Serializable {
+public class Authority implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idchatlieu;
-    private String tenchatlieu;
+    private Integer idphanquyen;
     private Timestamp ngaytao;
     private Timestamp ngaycapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "chatLieu", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+    @ManyToOne
+    @JoinColumn(name = "idtaikhoan")
+    private TaiKhoan taiKhoan;
+
+    @ManyToOne
+    @JoinColumn(name = "idrole")
+    private VaiTro vaiTro;
+
 }
