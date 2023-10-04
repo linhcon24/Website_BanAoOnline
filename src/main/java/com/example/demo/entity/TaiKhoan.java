@@ -43,7 +43,7 @@ public class TaiKhoan implements Serializable {
     private List<BaiDang> baiDangs;
 
     @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
-    private List<DanhSachYeuThich> danhSachYeuThiches;
+    private List<DanhSachYeuThich> danhSachYeuThichs;
 
     @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
     private List<Authority> authorities;
