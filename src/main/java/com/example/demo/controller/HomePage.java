@@ -44,5 +44,13 @@ public class HomePage {
         return "changePage";
     }
 
+    @GetMapping("/cart")
+    public String cart() {
+        return "cartPage";
+    }
 
+    @GetMapping("/product")
+    public String product() {
+        return "productPage";
+    }
 }
