@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import com.example.demo.bean.ForgetForm;
+import com.example.demo.bean.LoginForm;
+import com.example.demo.bean.RegisterForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,12 +23,14 @@ public class HomePage {
     }
 
     @GetMapping("/login")
-    public String login() {
+    public String login(Model model) {
+        model.addAttribute("data" , new LoginForm());
         return "loginPage";
     }
 
     @GetMapping("/register")
-    public String register() {
+    public String register(Model model) {
+        model.addAttribute("data" , new RegisterForm());
         return "registerPage";
     }
 
@@ -35,7 +40,8 @@ public class HomePage {
     }
 
     @GetMapping("/forget")
-    public String forget() {
+    public String forget(Model model) {
+        model.addAttribute("data" , new ForgetForm());
         return "forgetPage";
     }
 
