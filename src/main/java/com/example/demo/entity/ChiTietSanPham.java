@@ -17,7 +17,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name = "chitietsanpham")
-@ToString
 public class ChiTietSanPham implements Serializable {
 
     @Id
