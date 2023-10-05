@@ -16,12 +16,12 @@ public class AdminController {
     @Autowired
     HttpSession session;
 
-//    @GetMapping("/logout")
-//    public String showLogout(Model model, RedirectAttributes attributes) {
-////		session.removeAttribute("account");
+    @GetMapping("/logout")
+    public String showLogout(Model model, RedirectAttributes attributes) {
+		session.removeAttribute("account");
 //        session.invalidate();
-//        return "redirect:/index";
-//    }
+        return "redirect:/index";
+    }
 
 
     @GetMapping("/dashboard")

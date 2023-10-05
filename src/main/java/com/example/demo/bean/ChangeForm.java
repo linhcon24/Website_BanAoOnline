@@ -7,5 +7,9 @@ import lombok.Setter;
 @Getter
 public class ChangeForm {
 
+    private String passcu;
+    private String passmoi;
+    private String repassmoi;
+
 
 }

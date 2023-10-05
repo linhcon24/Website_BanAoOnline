@@ -26,7 +26,7 @@
 
 <%--<link rel="stylesheet" href="${pageContext.request.contextPath}/views/css/style.css">--%>
 
- <c:if test="${account == null }">
+ <c:if test="${account != null }">
     <section class="vh-100" style="background-color: #fff;">
             <div class="container py-5 h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
@@ -39,31 +39,32 @@
                       </div>
                       <div class="col-md-6 col-lg-7 d-flex align-items-center">
                         <div class="card-body p-4 p-lg-5 text-black">
-                          <form action="${pageContext.request.contextPath }/change" method="post" modelAttribute="data">
+                          <%--@elvariable id="data" type="java"--%>
+                          <f:form action="${pageContext.request.contextPath }/change" method="post" modelAttribute="data">
           
                             <div class="d-flex align-items-center mb-3 pb-1">
                               <span class="h1 fw-bold mb-0"> <h1 class="giua"><i class="fa-solid fa-rotate"></i> Đổi mật khẩu </h1></span>
                             </div>
                             <div class="form-outline mb-4">
                                 <%--@declare id="form2example17"--%><label class="form-label" for="form2Example17"><i class="fa-solid fa-lock"></i> Mật khẩu cũ</label>
-                              <input type="password" id="form2Example17" class="form-control form-control-lg" name="password-cu" path="passcu"/>
-                               <errors style="color:red" path="passcu" element="div"></errors>
+                              <f:input type="password" id="form2Example17" class="form-control form-control-lg" name="password-cu" path="passcu"/>
+                               <f:errors style="color:red" path="passcu" element="div"></f:errors>
                             </div>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example17"><i class="fa-solid fa-lock"></i> Mật khẩu cũ</label>
-                              <input type="password" id="form2Example27" class="form-control form-control-lg" name="password-moi" path="passmoi"/>
-                               <errors style="color:red" path="passmoi" element="div"></errors>
+                              <f:input type="password" id="form2Example27" class="form-control form-control-lg" name="password-moi" path="passmoi"/>
+                               <f:errors style="color:red" path="passmoi" element="div"></f:errors>
                             </div>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="form2Example17"><i class="fa-solid fa-lock"></i> Nhập lại mật khẩu mới</label>
-                              <input type="password" id="form2Example47" class="form-control form-control-lg" name="re-password-moi" path="repassmoi"/>
-                               <errors style="color:red" path="repassmoi" element="div"></errors>
+                              <f:input type="password" id="form2Example47" class="form-control form-control-lg" name="re-password-moi" path="repassmoi"/>
+                               <f:errors style="color:red" path="repassmoi" element="div"></f:errors>
                             </div>
                             <div class="pt-1 mb-4">
                               <button class="btn btn-dark btn-lg btn-block" type="submit"><i class="fa-solid fa-rotate"></i> Đổi mật khẩu</button>
                             </div>
                               <div class="l"><a class="small text-muted " href="login">>Back Login<</a></div>
-                          </form>
+                          </f:form>
 
                         </div>
                       </div>

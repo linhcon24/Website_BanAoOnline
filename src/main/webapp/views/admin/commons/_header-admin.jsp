@@ -263,7 +263,7 @@
             if (result.isConfirmed) {
                 Swal.fire('Đăng xuất thành công !', '', 'success');
                 setTimeout(() => {
-                    location.href = "${pageContext.request.contextPath}/admin/logout";
+                    location.href = "${pageContext.request.contextPath}/logout";
                 }, 2000);
 
 

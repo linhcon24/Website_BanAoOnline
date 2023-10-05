@@ -20,7 +20,8 @@
                         <div class="col-md-6 col-lg-7 d-flex align-items-center">
                             <div class="card-body p-4 p-lg-5 text-black">
 
-                                <form action="register" method="post" modelAttribute="data"
+                                <%--@elvariable id="data" type="java"--%>
+                                <f:form action="register" method="post" modelAttribute="data"
                                       enctype="multipart/form-data">
 
                                     <div class="d-flex align-items-center mb-3 pb-1">
@@ -30,31 +31,31 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example17"><i class="fa-solid fa-user"></i>
                                             Tài khoản</label>
-                                        <input type="text" id="form2Example17" class="form-control form-control-lg"
+                                        <f:input type="text" id="form2Example17" class="form-control form-control-lg"
                                                name="username" path="username"/>
-                                        <errors style="color:red" path="username" element="div"></errors>
+                                        <f:errors style="color:red" path="username" element="div"></f:errors>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example27"><i class="fa-solid fa-lock"></i>
                                             Mật khẩu</label>
-                                        <input type="password" id="form2Example27" class="form-control form-control-lg"
+                                        <f:input type="password" id="form2Example27" class="form-control form-control-lg"
                                                name="password" path="password"/>
-                                        <errors style="color:red" path="password" element="div"></errors>
+                                        <f:errors style="color:red" path="password" element="div"></f:errors>
                                     </div>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example27"><i class="fa-solid fa-lock"></i>
                                             Nhập lại mật khẩu</label>
-                                        <input type="password" id="form2Example47" class="form-control form-control-lg"
+                                        <f:input type="password" id="form2Example47" class="form-control form-control-lg"
                                                name="rePassword" path="rePassword"/>
-                                        <errors style="color:red" path="rePassword" element="div"></errors>
+                                        <f:errors style="color:red" path="rePassword" element="div"></f:errors>
                                     </div>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example17"><i
                                                 class="fa-solid fa-envelope"></i> Email</label>
-                                        <input type="text" id="form2Example37" class="form-control form-control-lg"
+                                        <f:input type="text" id="form2Example37" class="form-control form-control-lg"
                                                name="email" path="email"/>
-                                        <errors style="color:red" path="email" element="div"></errors>
+                                        <f:errors style="color:red" path="email" element="div"></f:errors>
                                     </div>
                                     <div class="form-outline mb-4">
                                         <input type="checkbox" name="checkbox"/> Tôi đồng ý với các điều khoản trên!
@@ -68,7 +69,7 @@
                                         Bạn đã có tài khoản? <a href="login"
                                                                 style="color: blue;">Đăng nhập.</a>
                                     </p>
-                                </form>
+                                </f:form>
 
                             </div>
                         </div>
@@ -79,3 +80,5 @@
     </div>
 </section>
 </c:if>
+<br>
+<br>

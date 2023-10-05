@@ -40,7 +40,8 @@
                             <div class="card-body p-4 p-lg-5 text-black">
 
 
-                                <form action="login" method="post" modelAttribute="data" enctype="multipart/form-data">
+                                <%--@elvariable id="data" type=""--%>
+                                <f:form action="login" method="post" modelAttribute="data" enctype="multipart/form-data">
 
                                     <div class="d-flex align-items-center mb-3 pb-1">
                                         <span class="h1 fw-bold mb-0"> <h1 class="giua"> <i
@@ -53,17 +54,17 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example17"><i class="fa-solid fa-user"></i>
                                             Tài Khoản</label>
-                                        <input type="text" id="form2Example17" class="form-control form-control-lg"
+                                        <f:input type="text" id="form2Example17" class="form-control form-control-lg"
                                                name="username" path="username"/>
-                                        <errors style="color:red" path="username" element="div"></errors>
+                                        <f:errors style="color:red" path="username" element="div"></f:errors>
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example27"><i class="fa-solid fa-lock"></i>
                                             Mật Khẩu</label>
-                                        <input type="password" id="form2Example27" class="form-control form-control-lg"
+                                        <f:input type="password" id="form2Example27" class="form-control form-control-lg"
                                                name="password" path="password"/>
-                                        <errors style="color:red" path="password" element="div"></errors>
+                                        <f:errors style="color:red" path="password" element="div"></f:errors>
 
                                     </div>
                                     <div class="form-outline mb-4">
@@ -81,7 +82,7 @@
                                     <p class="mb-5 pb-lg-2 l" style="color: #393f81;"> Bạn chưa có tài khoản? <a
                                             href="register"
                                             style="color: blue;"> Đăng ký ngay</a></p>
-                                </form>
+                                </f:form>
                             </div>
                         </div>
                     </div>
