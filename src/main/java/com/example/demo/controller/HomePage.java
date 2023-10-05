@@ -34,6 +34,11 @@ public class HomePage {
         return "homePage";
     }
 
+    @GetMapping("/info")
+    public String info() {
+        return "about";
+    }
+
     @GetMapping("/403")
     public String get403() {
         return "403";
@@ -45,6 +50,7 @@ public class HomePage {
         session.invalidate();
         return "redirect:/index";
     }
+
 
     @GetMapping("/login")
     public String login(Model model) {
