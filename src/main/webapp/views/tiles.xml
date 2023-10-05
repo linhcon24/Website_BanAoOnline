@@ -27,11 +27,11 @@
                        value="/views/index.jsp"/>
     </definition>
 
-    <definition name="productPage" extends="base.definition">
-        <put-attribute name="title" value="Product Page"/>
-        <put-attribute name="body"
-                       value="/views/product.jsp"/>
-    </definition>
+<!--    <definition name="productPage" extends="base.definition">-->
+<!--        <put-attribute name="title" value="Product Page"/>-->
+<!--        <put-attribute name="body"-->
+<!--                       value="/views/product.jsp"/>-->
+<!--    </definition>-->
 
     <definition name="about" extends="base.definition">
         <put-attribute name="title" value="About Page"/>
@@ -81,7 +81,7 @@
     </definition>
 
     <definition name="productPage" extends="base.definition">
-        <put-attribute name="title" value="Contact Page"/>
+        <put-attribute name="title" value="Product Page"/>
         <put-attribute name="body"
                        value="/views/product.jsp"/>
     </definition>
@@ -164,6 +164,60 @@
         <put-attribute name="title-admin" value="Admin Kích Thước Update"/>
         <put-attribute name="body-admin"
                        value="/views/admin/kichthuoc/updateKT.jsp"/>
+    </definition>
+
+    <definition name="adminMS" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Màu Sắc Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/mausac/mau-sac.jsp"/>
+    </definition>
+
+    <definition name="adminMSAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Màu Sắc Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/mausac/addMS.jsp"/>
+    </definition>
+
+    <definition name="adminMSUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Màu Sắc Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/mausac/updateMS.jsp"/>
+    </definition>
+
+    <definition name="adminNCC" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Nhà Cung Cấp Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/nhacungcap/nha-cung-cap.jsp"/>
+    </definition>
+
+    <definition name="adminNCCAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Nhà Cung Cấp Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/nhacungcap/addNCC.jsp"/>
+    </definition>
+
+    <definition name="adminNCCUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Nhà Cung Cấp Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/nhacungcap/updateNCC.jsp"/>
+    </definition>
+
+    <definition name="adminKD" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Kiểu Dáng Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/kieudang/kieu-dang.jsp"/>
+    </definition>
+
+    <definition name="adminKDAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Kiểu Dáng Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/kieudang/addKD.jsp"/>
+    </definition>
+
+    <definition name="adminKDUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Kiểu Dáng Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/kieudang/updateKD.jsp"/>
     </definition>
 
 

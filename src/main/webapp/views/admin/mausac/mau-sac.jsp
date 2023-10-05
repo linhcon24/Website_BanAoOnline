@@ -34,7 +34,7 @@
     </tr>
 
     <%--        <c:set value="0" var="i" scope="page"></c:set>--%>
-    <c:forEach items="${list}" var="p">
+    <c:forEach items="${listMS}" var="p">
         <%--            <c:set value="${i+1 }" var="i" scope="page" ></c:set>--%>
         <c:if test="${p.trangthai == 0 }">
             <tr>

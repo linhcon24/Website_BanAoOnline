@@ -24,7 +24,7 @@ public class KieuDangController {
         Integer pageSize = 5;
         List<KieuDang> list = service.getAll(pageNum - 1, pageSize).getContent();
         List<KieuDang> count = service.count();
-        model.addAttribute("list", list);
+        model.addAttribute("listKD", list);
         System.out.println(list.toString());
         Integer count1 = Math.round(count.size() % pageSize) == 0 ? Math.round(count.size() / pageSize)
                 : Math.round(count.size() / pageSize) + 1;

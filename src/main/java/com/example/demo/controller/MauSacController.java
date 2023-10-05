@@ -28,7 +28,7 @@ public class MauSacController {
         Integer pageSize = 5;
         List<MauSac> list = service.getAll(pageNum - 1, pageSize).getContent();
         List<MauSac> count = service.count();
-        model.addAttribute("list", list);
+        model.addAttribute("listMS", list);
         System.out.println(list.toString());
         Integer count1 = Math.round(count.size() % pageSize) == 0 ? Math.round(count.size() / pageSize)
                 : Math.round(count.size() / pageSize) + 1;

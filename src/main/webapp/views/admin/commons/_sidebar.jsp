@@ -54,6 +54,8 @@
                 <a class="collapse-item" href="/admin/anhs">Ảnh</a>
                 <a class="collapse-item" href="/admin/chat-lieu">Chất Liệu</a>
                 <a class="collapse-item" href="/admin/kich-thuoc">Kích Thước</a>
+                <a class="collapse-item" href="/admin/kieu-dang">Kiểu Dáng</a>
+                <a class="collapse-item" href="/admin/nha-cung-cap">Nhà Cung Cấp</a>
                 <a class="collapse-item" href="/admin/mau-sac">Màu Sắc</a>
             </div>
         </div>
