@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: adm
-  Date: 9/28/2023
-  Time: 9:52 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
@@ -18,39 +11,35 @@
 
 <br>
 <%--<c:if test="${account.role == 0 }">--%>
-<h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Thương Hiệu</h1>
+<h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Ảnh</h1>
 <br>
 <div class="btnThem">
-    <button type="button" class="btn btn-info"><a href="${pageContext.request.contextPath }/admin/thuong-hieu/add"><i
-            class="fa-solid fa-circle-plus"></i> Thêm Thương Hiệu</a></button>
+    <button type="button" class="btn btn-info"><a href="${pageContext.request.contextPath }/admin/anhs/add"><i
+            class="fa-solid fa-circle-plus"></i> Thêm Ảnh</a></button>
 </div>
 <br>
 <table class="table">
     <tr>
         <%--            <td>#</td>--%>
-        <td>ID</td>
-        <td>Tên Thương Hiệu</td>
-            <td>Ngày Tạo</td>
-            <td>Ngày Cập Nhật</td>
+<%--        <td>ID</td>--%>
+        <td>Tên Ảnh</td>
         <td>Chức năng</td>
     </tr>
 
     <%--        <c:set value="0" var="i" scope="page"></c:set>--%>
-    <c:forEach items="${list}" var="p">
+    <c:forEach items="${listAnh}" var="p">
         <%--            <c:set value="${i+1 }" var="i" scope="page" ></c:set>--%>
         <c:if test="${p.trangthai == 0 }">
             <tr>
                     <%--                    <td>${i }</td>--%>
-                <td>${p.idthuonghieu}</td>
-                <td>${p.tenthuonghieu}</td>
-                   <td>${p.ngaytao}</td>
-                        <td>${p.ngaycapnhat}</td>
+                <td style="display: none">${p.idimage}</td>
+                <td>${p.tenimage}</td>
                 <td>
-                    <button type="button" class="btn btn-warning btnSua"><a
-                            href="${pageContext.request.contextPath}/admin/thuong-hieu/update/${p.idthuonghieu }"><i
-                            class="fa-solid fa-wrench"></i> Sửa</a></button>
                     <button type="button" class="btn btn-danger btnSua"><a
-                            href="${pageContext.request.contextPath}/admin/thuong-hieu/delete/${p.idthuonghieu }"><i
+                            href="${pageContext.request.contextPath}/admin/anhs/update/${p.idimage }"><i
+                            class="fa-solid fa-wrench"></i> Sửa</a></button>
+                    <button type="button" class="btn btn-warning btnSua"><a
+                            href="${pageContext.request.contextPath}/admin/anhs/delete/${p.idimage }"><i
                             class="fa-solid fa-trash"></i> Xóa</a></button>
                 </td>
             </tr>

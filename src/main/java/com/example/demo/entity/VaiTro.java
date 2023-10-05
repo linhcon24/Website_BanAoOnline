@@ -1,9 +1,11 @@
 package com.example.demo.entity;
 
+
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -13,14 +15,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "nhacungcap")
+@Table(name = "vaitro")
 @ToString
-public class NhaCungCap implements Serializable {
+public class VaiTro implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idnhacungcap;
-    private String tennhacungcap;
+    private Integer idrole;
+    private String tenrole;
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @Temporal(TemporalType.TIMESTAMP)
     private Date ngaytao;
@@ -29,8 +31,9 @@ public class NhaCungCap implements Serializable {
     private Date ngaycapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "nhaCungCap" ,fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+    @OneToMany(mappedBy = "vaiTro", fetch = FetchType.LAZY)
+    private List<Authority> authorities;
+
+
+
 }
-
-

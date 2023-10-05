@@ -14,7 +14,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/dashboard">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
             <%--<i class="fa-solid fa-gauge"></i>--%>
@@ -27,7 +27,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="dashboard">
+        <a class="nav-link" href="/admin/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -50,8 +50,11 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="thuong-hieu">Thương Hiệu</a>
-                <a class="collapse-item" href="cards">Cards</a>
+                <a class="collapse-item" href="/admin/thuong-hieu">Thương Hiệu</a>
+                <a class="collapse-item" href="/admin/anhs">Ảnh</a>
+                <a class="collapse-item" href="/admin/chat-lieu">Chất Liệu</a>
+                <a class="collapse-item" href="/admin/kich-thuoc">Kích Thước</a>
+                <a class="collapse-item" href="/admin/mau-sac">Màu Sắc</a>
             </div>
         </div>
     </li>

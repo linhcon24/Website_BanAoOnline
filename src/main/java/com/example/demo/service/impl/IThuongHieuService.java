@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,8 @@ public class IThuongHieuService implements ThuongHieuService {
 
     @Override
     public ThuongHieu add(ThuongHieu thuongHieu) {
+        thuongHieu.setNgaytao(new Date());
+        thuongHieu.setNgaycapnhat(new Date());
         return repository.save(thuongHieu);
     }
 
@@ -43,6 +46,8 @@ public class IThuongHieuService implements ThuongHieuService {
     public ThuongHieu update(ThuongHieu thuongHieu) {
         ThuongHieu th = repository.getById(thuongHieu.getIdthuonghieu());
         th.setTenthuonghieu(thuongHieu.getTenthuonghieu());
+        thuongHieu.setNgaytao(new Date());
+        thuongHieu.setNgaycapnhat(new Date());
         return repository.save(th);
     }
 

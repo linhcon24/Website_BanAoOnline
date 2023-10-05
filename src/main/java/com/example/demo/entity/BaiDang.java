@@ -1,26 +1,30 @@
 package com.example.demo.entity;
 
+
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Date;
-import java.util.List;
+import java.util.UUID;
 
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "nhacungcap")
+@Table(name = "baidang")
 @ToString
-public class NhaCungCap implements Serializable {
+public class BaiDang implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idnhacungcap;
-    private String tennhacungcap;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private UUID idbaidang;
+    private String mabaidang;
+    private String tenbaidang;
+    private String noidung;
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @Temporal(TemporalType.TIMESTAMP)
     private Date ngaytao;
@@ -29,8 +33,7 @@ public class NhaCungCap implements Serializable {
     private Date ngaycapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "nhaCungCap" ,fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+    @ManyToOne
+    @JoinColumn(name = "idtaikhoan")
+    private TaiKhoan taiKhoan;
 }
-
-

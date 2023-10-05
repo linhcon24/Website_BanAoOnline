@@ -3,11 +3,16 @@
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-
+<div class="input-group">
+    <div class="form-outline">
+        <input id="search-input" type="search" id="form1" class="form-control " placeholder="Tìm kiếm..."/>
+    </div>
+    <button id="search-button" type="button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+    </button>
+</div>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light nav">
-
-
         <a class="navbar-brand" href="index"><img class="logo"
                                                   src="${pageContext.request.contextPath}/views/img/logotitle.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -16,7 +21,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="col-sm-8">
+<%--            <div class="col-sm-8">--%>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item menu">
                         <a class="chu-m" href="${pageContext.request.contextPath}/index"><i class="fa-solid fa-house"></i>
@@ -53,8 +58,8 @@
 
 
                 </ul>
-            </div>
-            <div class="col-sm-4">
+<%--            </div>--%>
+<%--            <div class="col-sm-4">--%>
                 <div class="button-cangiua">
                     <!--  <button class="nut"><a class="nav-link menu" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></button>https://s2.o7planning.com/templates/o7planning/resources/images/languages/vi.png -->
                     <div style="margin-left: 65px"><a style="color: white" href="?language=vi"><img style="width: 20px"
@@ -101,16 +106,11 @@
                     </button>
 
                 </div>
-                <div class="input-group">
-                    <div class="form-outline">
-                        <input id="search-input" type="search" id="form1" class="form-control " placeholder="Tìm kiếm..."/>
-                    </div>
-                    <button id="search-button" type="button" class="btn btn-primary">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
+
             </div>
+
         </div>
+
     </nav>
 </header>
 <%--    <script>--%>
