@@ -14,9 +14,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class HomePage {
+
+    @Autowired
+    HttpSession session;
 
     @Autowired
     private ChiTietSanPhamService chiTietSanPhamService;
@@ -31,6 +37,13 @@ public class HomePage {
     @GetMapping("/403")
     public String get403() {
         return "403";
+    }
+
+    @GetMapping("/logout")
+    public String showLogout(Model model, RedirectAttributes attributes) {
+//		session.removeAttribute("account");
+        session.invalidate();
+        return "redirect:/index";
     }
 
     @GetMapping("/login")

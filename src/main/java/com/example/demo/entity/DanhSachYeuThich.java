@@ -35,4 +35,8 @@ public class DanhSachYeuThich implements Serializable {
     @ManyToOne
     @JoinColumn(name = "idtaikhoan")
     private TaiKhoan taiKhoan;
+
+    @ManyToOne
+    @JoinColumn(name = "idsanpham")
+    private SanPham sanPham;
 }

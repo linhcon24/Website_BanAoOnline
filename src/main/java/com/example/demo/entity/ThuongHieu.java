@@ -27,6 +27,7 @@ public class ThuongHieu implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @Temporal(TemporalType.TIMESTAMP)
     private Date ngaycapnhat;
+    private String nguoicapnhat;
     private Integer trangthai;
 
     @OneToMany(mappedBy = "thuongHieu",fetch = FetchType.LAZY)

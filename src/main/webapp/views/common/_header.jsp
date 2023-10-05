@@ -113,28 +113,27 @@
 
     </nav>
 </header>
-<%--    <script>--%>
-<%--    	function dangXuat() {--%>
-<%--    		Swal.fire({--%>
-<%--    			  title: 'Bạn chắc chắn muốn đăng xuất?',--%>
-<%--    			  showCancelButton: true,--%>
-<%--    			  confirmButtonText: 'Đăng xuất',--%>
-<%--    			}).then((result) => {--%>
-<%--    			  /* Read more about isConfirmed, isDenied below */--%>
-<%--    			  if (result.isConfirmed) {--%>
-<%--    				  Swal.fire('Đăng xuất thành công !', '', 'success');--%>
-<%--    				  setTimeout(() => {--%>
-<%--    					  location.href = "${pageContext.request.contextPath}/logout";--%>
-<%--					}, 2000);--%>
-<%--    				--%>
-<%--    			    --%>
-<%--    			  } else if (result.isDenied) {--%>
-<%--    			   --%>
-<%--    			  }--%>
-<%--    			})--%>
-<%--		}--%>
-<%--    	--%>
-<%--    </script>--%>
+    <script>
+    	function dangXuat() {
+    		Swal.fire({
+    			  title: 'Bạn chắc chắn muốn đăng xuất?',
+    			  showCancelButton: true,
+    			  confirmButtonText: 'Đăng xuất',
+    			}).then((result) => {
+    			  /* Read more about isConfirmed, isDenied below */
+    			  if (result.isConfirmed) {
+    				  Swal.fire('Đăng xuất thành công !', '', 'success');
+    				  setTimeout(() => {
+    					  location.href = "${pageContext.request.contextPath}/logout";
+					}, 2000);
+
+
+    			  } else if (result.isDenied) {
+
+    			  }
+    			})
+		}
+    </script>
     <script>
         const searchButton = document.getElementById('search-button');
         const searchInput = document.getElementById('search-input');

@@ -28,6 +28,7 @@ public class SanPham implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @Temporal(TemporalType.TIMESTAMP)
     private Date ngaycapnhat;
+    private String nguoicapnhat;
     private Integer trangthai;
 
     @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
@@ -35,6 +36,10 @@ public class SanPham implements Serializable {
 
     @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
     private List<DanhGiaSanPham> danhGiaSanPhams;
+
+    @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
+    private List<DanhSachYeuThich> danhSachYeuThichs;
+
 
 
 

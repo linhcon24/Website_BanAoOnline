@@ -37,25 +37,25 @@
 </head>
 <body>
 <tiles:insertAttribute name="header"/>
-<%--<c:if test="${not empty message}">--%>
-<%--    <input type="hidden" id="message" value="${message }">--%>
-<%--    <input type="hidden" id="type" value="${type }">--%>
-<%--</c:if>--%>
+<c:if test="${not empty message}">
+    <input type="hidden" id="message" value="${message }">
+    <input type="hidden" id="type" value="${type }">
+</c:if>
 <tiles:insertAttribute name="body"/>
 
 <br>
 
 <tiles:insertAttribute name="footer"/>
-<%--<script type="text/javascript">--%>
-<%--    var message = document.getElementById("message").value;--%>
-<%--    var type = document.getElementById("type").value;--%>
-<%--    console.log(message);--%>
+<script type="text/javascript">
+    var message = document.getElementById("message").value;
+    var type = document.getElementById("type").value;
+    console.log(message);
 
-<%--    if(message != ""){--%>
-<%--        console.log("ggk");--%>
-<%--        Swal.fire(message, '', type);--%>
-<%--    }--%>
+    if(message != ""){
+        console.log("ok");
+        Swal.fire(message, '', type);
+    }
 
-<%--</script>--%>
+</script>
 </body>
 </html>

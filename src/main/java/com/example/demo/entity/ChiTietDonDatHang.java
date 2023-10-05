@@ -31,6 +31,7 @@ public class ChiTietDonDatHang implements Serializable {
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @Temporal(TemporalType.TIMESTAMP)
     private Date ngaycapnhat;
+    private String nguoicapnhat;
     private Integer trangthai;
 
     @ManyToOne

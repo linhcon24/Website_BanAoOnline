@@ -227,6 +227,8 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+<%--<a  href="login" onclick="dangXuat()">Logout</a>--%>
+
 
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -240,13 +242,37 @@
                 </button>
             </div>
             <div class="modal-body">Ấn "Ok" để đăng xuất tài khoản!</div>
+
+
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login">Logout</a>
+                <a class="btn btn-primary" href="/login">Logout</a>
+
             </div>
         </div>
     </div>
 </div>
+<script>
+    function dangXuat() {
+        Swal.fire({
+            title: 'Bạn chắc chắn muốn đăng xuất?',
+            showCancelButton: true,
+            confirmButtonText: 'Đăng xuất',
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                Swal.fire('Đăng xuất thành công !', '', 'success');
+                setTimeout(() => {
+                    location.href = "${pageContext.request.contextPath}/admin/logout";
+                }, 2000);
+
+
+            } else if (result.isDenied) {
+
+            }
+        })
+    }
+</script>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->

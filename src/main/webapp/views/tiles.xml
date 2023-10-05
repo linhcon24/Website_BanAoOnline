@@ -27,11 +27,11 @@
                        value="/views/index.jsp"/>
     </definition>
 
-<!--    <definition name="productPage" extends="base.definition">-->
-<!--        <put-attribute name="title" value="Product Page"/>-->
-<!--        <put-attribute name="body"-->
-<!--                       value="/views/product.jsp"/>-->
-<!--    </definition>-->
+    <!--    <definition name="productPage" extends="base.definition">-->
+    <!--        <put-attribute name="title" value="Product Page"/>-->
+    <!--        <put-attribute name="body"-->
+    <!--                       value="/views/product.jsp"/>-->
+    <!--    </definition>-->
 
     <definition name="about" extends="base.definition">
         <put-attribute name="title" value="About Page"/>
@@ -218,6 +218,24 @@
         <put-attribute name="title-admin" value="Admin Kiểu Dáng Update"/>
         <put-attribute name="body-admin"
                        value="/views/admin/kieudang/updateKD.jsp"/>
+    </definition>
+
+    <definition name="adminAcc" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Tài Khoản Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/taikhoan/index.jsp"/>
+    </definition>
+
+    <definition name="adminAccAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Tài Khoản Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/taikhoan/addTK.jsp"/>
+    </definition>
+
+    <definition name="adminAccUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Tài Khoản Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/taikhoan/updateTK.jsp"/>
     </definition>
 
 
