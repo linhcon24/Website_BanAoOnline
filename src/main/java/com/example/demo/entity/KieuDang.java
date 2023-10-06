@@ -29,9 +29,9 @@ public class KieuDang implements Serializable {
     private Date ngaycapnhat;
     private String nguoicapnhat;
     private Integer trangthai;
-
-    @OneToMany(mappedBy = "kieuDang" ,fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+//
+//    @OneToMany(mappedBy = "kieuDang" ,fetch = FetchType.LAZY)
+//    private List<ChiTietSanPham> chiTietSanPhams;
 }
 
 

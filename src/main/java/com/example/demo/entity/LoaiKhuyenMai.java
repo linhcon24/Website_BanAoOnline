@@ -31,7 +31,7 @@ public class LoaiKhuyenMai implements Serializable {
     private Date ngaycapnhat;
     private String nguoicapnhat;
     private Integer trangthai;
-
-    @OneToMany(mappedBy = "loaiKhuyenMai", fetch = FetchType.LAZY)
-    private List<KhuyenMai> khuyenMais;
+//
+//    @OneToMany(mappedBy = "loaiKhuyenMai", fetch = FetchType.LAZY)
+//    private List<KhuyenMai> khuyenMais;
 }

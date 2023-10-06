@@ -48,7 +48,7 @@ public class DonDatHang implements Serializable {
     @JoinColumn(name = "idhoadon")
     private HoaDon hoaDon;
 
-    @OneToMany(mappedBy = "donDatHang", fetch = FetchType.LAZY)
-    private List<ChiTietDonDatHang> chiTietDonDatHangs;
+//    @OneToMany(mappedBy = "donDatHang", fetch = FetchType.LAZY)
+//    private List<ChiTietDonDatHang> chiTietDonDatHangs;
 
 }

@@ -35,8 +35,8 @@ public class GioHang implements Serializable {
     @JoinColumn(name = "idtaikhoan")
     private TaiKhoan taiKhoan;
 
-    @OneToMany(mappedBy = "gioHang",fetch = FetchType.LAZY)
-    private List<GioHangChiTiet> gioHangChiTiets;
+//    @OneToMany(mappedBy = "gioHang",fetch = FetchType.LAZY)
+//    private List<GioHangChiTiet> gioHangChiTiets;
 
 
 }

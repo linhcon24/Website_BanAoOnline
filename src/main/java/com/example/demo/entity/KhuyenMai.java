@@ -37,8 +37,8 @@ public class KhuyenMai implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "khuyenMai" ,fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+//    @OneToMany(mappedBy = "khuyenMai" ,fetch = FetchType.LAZY)
+//    private List<ChiTietSanPham> chiTietSanPhams;
 
     @ManyToOne
     @JoinColumn(name = "idloaikhuyenmai")

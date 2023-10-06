@@ -36,7 +36,7 @@ public class Anh implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "anh", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+//    @OneToMany(mappedBy = "anh", fetch = FetchType.LAZY)
+//    private List<ChiTietSanPham> chiTietSanPhams;
 }
 

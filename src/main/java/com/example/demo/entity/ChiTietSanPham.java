@@ -72,11 +72,11 @@ public class ChiTietSanPham implements Serializable {
     @JoinColumn(name = "idimage")
     private Anh anh;
 
-    @OneToMany(mappedBy = "chiTietSanPham", fetch = FetchType.LAZY)
-    private List<GioHangChiTiet> gioHangChiTiets;
-
-    @OneToMany(mappedBy = "chiTietSanPham", fetch = FetchType.LAZY)
-    private List<ChiTietDonDatHang> chiTietDonDatHangs;
+//    @OneToMany(mappedBy = "chiTietSanPham", fetch = FetchType.LAZY)
+//    private List<GioHangChiTiet> gioHangChiTiets;
+//
+//    @OneToMany(mappedBy = "chiTietSanPham", fetch = FetchType.LAZY)
+//    private List<ChiTietDonDatHang> chiTietDonDatHangs;
 
 
 }

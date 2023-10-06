@@ -30,6 +30,6 @@ public class ThuongHieu implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "thuongHieu",fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+//    @OneToMany(mappedBy = "thuongHieu",fetch = FetchType.LAZY)
+//    private List<ChiTietSanPham> chiTietSanPhams;
 }
