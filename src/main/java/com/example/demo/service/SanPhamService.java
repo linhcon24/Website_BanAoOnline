@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface SanPhamService {
 
     public Page<SanPham> getAll(Integer pageNum , Integer pageSize);
+    public List<SanPham> getAll2();
     public List<SanPham> count();
     public Optional<SanPham> getById(Integer id);
     public SanPham add(SanPham sanPham);

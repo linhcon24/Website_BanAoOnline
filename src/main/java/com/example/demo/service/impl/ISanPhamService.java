@@ -25,6 +25,11 @@ public class ISanPhamService implements SanPhamService {
     }
 
     @Override
+    public List<SanPham> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<SanPham> count() {
         return repository.countPhanTrang();
     }

@@ -38,17 +38,25 @@ public class TaiKhoan implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
-    private List<DonDatHang> donDatHangs;
+//    @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
+//    private List<DonDatHang> donDatHangs;
+//
+//    @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
+//    private List<BaiDang> baiDangs;
 
-    @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
-    private List<BaiDang> baiDangs;
+//    @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
+//    private List<DanhSachYeuThich> danhSachYeuThichs;
 
     @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
     private List<DanhSachYeuThich> danhSachYeuThichs;
 
     @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
     private List<GioHang> gioHangs;
+//    @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
+//    private List<Authority> authorities;
+//
+//    @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
+//    private List<GioHang> gioHangs;
 
     @OneToMany(mappedBy = "taiKhoan", fetch = FetchType.LAZY)
     private List<DanhGiaSanPham> danhGiaSanPhams;

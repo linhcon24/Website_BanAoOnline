@@ -41,8 +41,5 @@ public class SanPham implements Serializable {
     private List<DanhSachYeuThich> danhSachYeuThichs;
 
 
-
-
-
 }
 

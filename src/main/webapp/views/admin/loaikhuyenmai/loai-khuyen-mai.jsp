@@ -1,0 +1,82 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: adm
+  Date: 9/28/2023
+  Time: 9:52 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+
+
+
+
+
+<br>
+<%--<c:if test="${account.role == 0 }">--%>
+<h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Loại Khuyến Mại  </h1>
+<br>
+<div class="btnThem">
+    <button type="button" class="btn btn-info"><a href="${pageContext.request.contextPath }/admin/loai-khuyen-mai/add"><i
+            class="fa-solid fa-circle-plus"></i> Thêm loại khuyến mãi </a></button>
+</div>
+<br>
+<table class="table">
+    <tr>
+        <%--            <td>#</td>--%>
+        <td>ID</td>
+        <td>Mã </td>
+        <td>Tên </td>
+        <td>Ngày Tạo </td>
+        <td>Ngày Cập Nhật </td>
+        <td>Người Cập Nhật </td>
+        <td>Trạng Thái </td>
+        <td >Chức năng</td>
+    </tr>
+
+    <%--        <c:set value="0" var="i" scope="page"></c:set>--%>
+    <c:forEach items="${listLKM}" var="p">
+        <%--            <c:set value="${i+1 }" var="i" scope="page" ></c:set>--%>
+        <c:if test="${p.trangthai == 0 }">
+            <tr>
+                    <%--                    <td>${i }</td>--%>
+                <td>${p.idloaikhuyenmai}</td>
+                <td>${p.maloaikhuyenmai}</td>
+                <td>${p.tenloaikhuyenmai}</td>
+                <td>${p.ngaytao}</td>
+                <td>${p.ngaycapnhat}</td>
+                <td>${p.nguoicapnhat}</td>
+                <td>${p.trangthai}</td>
+                <td>
+                    <button type="button" class="btn btn-warning btnSua"><a
+                            href="${pageContext.request.contextPath}/admin/loai-khuyen-mai/update/${p.idloaikhuyenmai}"><i
+                            class="fa-solid fa-wrench"></i> Sửa</a></button>
+                    <button type="button" class="btn btn-danger btnSua"><a
+                            href="${pageContext.request.contextPath}/admin/loai-khuyen-mai/delete/${p.idloaikhuyenmai }"><i
+                            class="fa-solid fa-trash"></i> Xóa</a></button>
+                    <button type="button" class="btn btn-danger btnSua"><a
+                            href="${pageContext.request.contextPath}/admin/loai-khuyen-mai/detail/${p.idloaikhuyenmai }"><i
+                            class="fa-solid fa-trash"></i> Xem Chi Tiết</a></button>
+                </td>
+            </tr>
+        </c:if>
+    </c:forEach>
+</table>
+<div>
+    <ul class="pagination">
+        <c:forEach begin="1" end="${count}" var="i">
+            <li class="page-item">
+                <a href="${pageContext.request.contextPath}?pageNum=${i}" class="page-link">${i }</a>
+            </li>
+        </c:forEach>
+    </ul>
+</div>
+<%--</c:if>--%>
+<%--<c:if test="${account == null ||account.role == 1 }">--%>
+<%--    <h1>Bạn không có quyền truy cập chức năng này !</h1>--%>
+<%--</c:if>--%>
+

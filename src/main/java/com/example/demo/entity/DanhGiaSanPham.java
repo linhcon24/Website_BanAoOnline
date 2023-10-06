@@ -41,5 +41,4 @@ public class DanhGiaSanPham implements Serializable {
     @JoinColumn(name = "idtaikhoan")
     private TaiKhoan taiKhoan;
 
-
 }

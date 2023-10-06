@@ -58,7 +58,11 @@
                 <a class="collapse-item" href="/admin/kieu-dang">Kiểu Dáng</a>
                 <a class="collapse-item" href="/admin/nha-cung-cap">Nhà Cung Cấp</a>
                 <a class="collapse-item" href="/admin/mau-sac">Màu Sắc</a>
-
+                <a class="collapse-item" href="/admin/danh-sach-yeu-thich">Danh Sách Yêu Thích</a>
+                <a class="collapse-item" href="/admin/danh-gia-san-pham">Đánh Giá Sản Phẩm</a>
+                <a class="collapse-item" href="/admin/loai-khuyen-mai">Loại Khuyến Mãi</a>
+                <a class="collapse-item" href="/admin/khuyen-mai">Khuyến Mãi</a>
+                <a class="collapse-item" href="/admin/bai-dang">Bài Đăng</a>
             </div>
         </div>
     </li>

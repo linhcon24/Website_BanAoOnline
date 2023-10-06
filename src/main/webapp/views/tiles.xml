@@ -147,6 +147,11 @@
                        value="/views/admin/chatlieu/updateCL.jsp"/>
     </definition>
 
+    <definition name="adminDSYT" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Danh Sách Yêu Thích"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/danhsachyeuthich/danh-sach-yeu-thich.jsp"/>
+    </definition>
 
     <definition name="adminKT" extends="baseAD.definition">
         <put-attribute name="title-admin" value="Admin Kích Thước Page"/>
@@ -166,6 +171,80 @@
                        value="/views/admin/kichthuoc/updateKT.jsp"/>
     </definition>
 
+    <definition name="adminKT" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Kích Thước Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/kichthuoc/kich-thuoc.jsp"/>
+    </definition>
+
+    <definition name="adminKTAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Kích Thước Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/kichthuoc/addKT.jsp"/>
+    </definition>
+
+    <definition name="adminKTUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Kích Thước Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/kichthuoc/updateKT.jsp"/>
+    </definition>
+
+
+    <definition name="adminBD" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Bài Đăng Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/baidang/bai-dang.jsp"/>
+    </definition>
+
+    <definition name="adminBDAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Bài Đăng Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/baidang/addBD.jsp"/>
+    </definition>
+
+    <definition name="adminBDUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Bài Đăng Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/baidang/updateBD.jsp"/>
+    </definition>
+
+
+    <definition name="adminKM" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Khuyến Mãi Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/khuyenmai/khuyen-mai.jsp"/>
+    </definition>
+
+    <definition name="adminKMAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Khuyến Mãi Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/khuyenmai/addKM.jsp"/>
+    </definition>
+
+    <definition name="adminKMUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Khuyến Mãi Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/khuyenmai/updateKM.jsp"/>
+    </definition>
+
+    <definition name="adminDGSP" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Đánh Giá Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/danhgiasanpham/danh-gia-san-pham.jsp"/>
+    </definition>
+
+    <definition name="adminDGSPAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Đánh Giá Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/danhgiasanpham/addDG.jsp"/>
+    </definition>
+
+    <definition name="adminDGSPUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Đánh Giá Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/danhgiasanpham/updateDG.jsp"/>
+    </definition>
+
     <definition name="adminMS" extends="baseAD.definition">
         <put-attribute name="title-admin" value="Admin Màu Sắc Page"/>
         <put-attribute name="body-admin"
@@ -183,6 +262,33 @@
         <put-attribute name="body-admin"
                        value="/views/admin/mausac/updateMS.jsp"/>
     </definition>
+
+
+
+    <definition name="adminLKM" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Loại Khuyến Mại Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/loaikhuyenmai/loai-khuyen-mai.jsp"/>
+    </definition>
+
+    <definition name="adminLKMAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Loại Khuyến Mại Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/loaikhuyenmai/addLKM.jsp"/>
+    </definition>
+
+    <definition name="adminLKMUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Loại Khuyến Mại Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/loaikhuyenmai/updateLKM.jsp"/>
+    </definition>
+
+    <definition name="adminLKMDetail" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Loại Khuyến Mại Detail"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/loaikhuyenmai/detail.jsp"/>
+    </definition>
+
 
     <definition name="adminNCC" extends="baseAD.definition">
         <put-attribute name="title-admin" value="Admin Nhà Cung Cấp Page"/>
