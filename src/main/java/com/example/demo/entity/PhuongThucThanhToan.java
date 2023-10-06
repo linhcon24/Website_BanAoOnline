@@ -31,8 +31,8 @@ public class PhuongThucThanhToan implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "phuongThucThanhToan" ,fetch = FetchType.LAZY)
-    private List<DonDatHang> donDatHangs;
+//    @OneToMany(mappedBy = "phuongThucThanhToan" ,fetch = FetchType.LAZY)
+//    private List<DonDatHang> donDatHangs;
 
 
 

@@ -31,6 +31,6 @@ public class ChatLieu implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "chatLieu", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+//    @OneToMany(mappedBy = "chatLieu", fetch = FetchType.LAZY)
+//    private List<ChiTietSanPham> chiTietSanPhams;
 }

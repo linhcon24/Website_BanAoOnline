@@ -31,8 +31,8 @@ public class MauSac implements Serializable {
     private Integer trangthai;
 
 
-    @OneToMany(mappedBy = "mauSac", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
+//    @OneToMany(mappedBy = "mauSac", fetch = FetchType.LAZY)
+//    private List<ChiTietSanPham> chiTietSanPhams;
 }
 
 

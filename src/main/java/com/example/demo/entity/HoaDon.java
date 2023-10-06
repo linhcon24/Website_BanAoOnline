@@ -35,7 +35,7 @@ public class HoaDon implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "hoaDon", fetch = FetchType.LAZY)
-    private List<DonDatHang> donDatHangs;
+//    @OneToMany(mappedBy = "hoaDon", fetch = FetchType.LAZY)
+//    private List<DonDatHang> donDatHangs;
 
 }

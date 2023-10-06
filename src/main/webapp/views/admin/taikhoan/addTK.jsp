@@ -13,7 +13,7 @@
          pageEncoding="UTF-8" %>
 
 <div class="container">
-    <h1> Thêm Thương Hiệu</h1>
+    <h1> Thêm Tài Khoản</h1>
     <p style="color: red">${message }</p>
     <%--@elvariable id="tk" type=""--%>
     <f:form modelAttribute="tk" action="${pageContext.request.contextPath}/admin/tai-khoan/add" method="POST"

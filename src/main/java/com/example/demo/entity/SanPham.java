@@ -31,15 +31,6 @@ public class SanPham implements Serializable {
     private String nguoicapnhat;
     private Integer trangthai;
 
-    @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
-    private List<ChiTietSanPham> chiTietSanPhams;
-
-    @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
-    private List<DanhGiaSanPham> danhGiaSanPhams;
-
-    @OneToMany(mappedBy = "sanPham", fetch = FetchType.LAZY)
-    private List<DanhSachYeuThich> danhSachYeuThichs;
-
 
 }
 

@@ -34,6 +34,10 @@ public class KhuyenMai implements Serializable {
 //    @Temporal(TemporalType.TIMESTAMP)
     private Date ngaycapnhat;
     private Integer trangthai;
+
+//    @OneToMany(mappedBy = "khuyenMai" ,fetch = FetchType.LAZY)
+//    private List<ChiTietSanPham> chiTietSanPhams;
+
     @ManyToOne
     @JoinColumn(name = "idloaikhuyenmai")
     private LoaiKhuyenMai loaiKhuyenMai;
