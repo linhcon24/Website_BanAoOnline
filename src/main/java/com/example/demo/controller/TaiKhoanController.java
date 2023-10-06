@@ -6,12 +6,19 @@ import com.example.demo.entity.TaiKhoan;
 import com.example.demo.entity.ThuongHieu;
 import com.example.demo.service.TaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 @Controller
@@ -20,6 +27,10 @@ public class TaiKhoanController {
 
     @Autowired
     private TaiKhoanService service;
+
+    @Value("${upload.path}")
+    private String pathFolder;
+
 
     @GetMapping()
     public String showAcc(Model model, @RequestParam(name = "pageNum", defaultValue = "1") Integer pageNum) {
@@ -41,23 +52,42 @@ public class TaiKhoanController {
 
     @PostMapping("/add")
     public String addTH(Model model, RedirectAttributes redirect, @ModelAttribute(name = "tk") TaiKhoanForm form,
-                        BindingResult result) {
-
-        if (!result.hasErrors()) {
-            if (service.getByUsername(form.getUsername()) != null) {
-                redirect.addFlashAttribute("message", "Tài khoản đã tòn tại trên hệ thống!");
-                redirect.addFlashAttribute("type", "error");
-                return "adminAccAdd";
-            }
-            TaiKhoan taiKhoan = form.data(null);
-            taiKhoan.setTrangthai(0);
-            if (service.add(taiKhoan) != null) {
-                redirect.addFlashAttribute("message", "Thêm thành công !");
-                redirect.addFlashAttribute("type", "success");
-                return "redirect:/admin/tai-khoan";
-            }
+                        BindingResult result, @RequestParam(name = "file") MultipartFile file) {
+        if (result.hasErrors()) {
+            return "adminAccAdd";
         }
 
+        if (service.getByUsername(form.getUsername()) != null) {
+            redirect.addFlashAttribute("message", "Tài khoản đã tòn tại trên hệ thống!");
+            redirect.addFlashAttribute("type", "error");
+            return "adminAccAdd";
+        }
+
+        if (file.isEmpty()) {
+            redirect.addFlashAttribute("message", " Vui lòng tải ảnh sản phẩm lên !");
+            redirect.addFlashAttribute("type", "error");
+            return "adminAccAdd";
+        }
+        try {
+            if (!file.isEmpty()) {
+                byte[] bytes;
+                bytes = file.getBytes();
+                Path path = Paths.get(pathFolder + file.getOriginalFilename());
+                Files.write(path, bytes);
+
+                TaiKhoan taiKhoan = form.data(null);
+                taiKhoan.setTrangthai(0);
+                if (service.add(taiKhoan) != null) {
+                    redirect.addFlashAttribute("message", "Thêm thành công !");
+                    redirect.addFlashAttribute("type", "success");
+                    return "redirect:/admin/tai-khoan";
+                }
+            }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
         return "adminAccAdd";
     }
 
@@ -71,18 +101,42 @@ public class TaiKhoanController {
 
     @PostMapping("/update")
     public String updateTK(Model model, RedirectAttributes redirect, @ModelAttribute(name = "tk") TaiKhoanForm form,
-                           BindingResult result) {
+                           BindingResult result, @RequestParam(name = "file") MultipartFile file) {
+        if (result.hasErrors()) {
+            return "adminAccUpdate";
+        }
+        //Khong loi
         if (!result.hasErrors()) {
-            TaiKhoan taiKhoan = service.getAccountById(form.getIdtaikhoan());
-            TaiKhoan acc = form.data(taiKhoan);
-            if (service.update(acc) != null) {
-                redirect.addFlashAttribute("message", "Sửa thành công !");
-                redirect.addFlashAttribute("type", "success");
-                return "redirect:/admin/tai-khoan";
+            try {
+                TaiKhoan taiKhoan = service.getAccountById(form.getIdtaikhoan());
+                TaiKhoan acc = form.data(taiKhoan);
+                String anh = "";
+                if (file.isEmpty()) {
+                    anh = acc.getImage();
+                } else {
+                    anh = file.getOriginalFilename();
+                    byte[] bytes;
+
+                    bytes = file.getBytes();
+
+                    Path path = Paths.get(pathFolder + file.getOriginalFilename());
+                    Files.write(path, bytes);
+                }
+                acc.setImage(anh);
+                acc.setTrangthai(0);
+                if (service.update(acc) != null) {
+                    redirect.addFlashAttribute("message", "Sửa thành công !");
+                    redirect.addFlashAttribute("type", "success");
+                    return "redirect:/admin/tai-khoan";
+                }
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
             }
         }
         return "adminAccUpdate";
     }
+
 
     @GetMapping("/delete/{id}")
     public String deleteTK(Model model, @PathVariable(name = "id") Integer id, RedirectAttributes redirect) {
