@@ -75,6 +75,6 @@
             </div>
           </section>
  </c:if>
-<%-- <c:if test="${account == null}">--%>
-<%--<h1>Bạn không có quyền truy cập chức năng này !</h1>--%>
-<%--</c:if>--%>
+ <c:if test="${account == null}">
+<h1>Bạn không có quyền truy cập chức năng này !</h1>
+</c:if>

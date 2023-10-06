@@ -29,7 +29,7 @@ public class AnhController {
     private AnhService service;
 
     @GetMapping()
-    public String showAnh(Model model, @RequestParam(name = "pageNum", defaultValue = "1") Integer pageNum){
+    public String showAnh(Model model, @RequestParam(name = "pageNum", defaultValue = "1") Integer pageNum) {
         Integer pageSize = 5;
         List<Anh> list = service.getAll(pageNum - 1, pageSize).getContent();
         List<Anh> count = service.count();
@@ -42,10 +42,11 @@ public class AnhController {
     }
 
     @GetMapping("/add")
-    public String getAddAnh(Model model){
+    public String getAddAnh(Model model) {
         model.addAttribute("anh", new Anh());
         return "adminAnhAdd";
     }
+
     @PostMapping("/add")
     public String addAnh(Model model, RedirectAttributes redirect, @ModelAttribute(name = "anh") AnhForm form,
                          BindingResult result, @RequestParam("imageFile") MultipartFile[] imageFiles, HttpServletRequest request) {
@@ -91,6 +92,7 @@ public class AnhController {
         }
         return "adminAnhAdd";
     }
+
     @GetMapping("/update/{id}")
     public String getUpdateAnh(Model model, @PathVariable(name = "id") UUID id) {
         Anh a = service.getByIdA(id);
@@ -98,9 +100,10 @@ public class AnhController {
         model.addAttribute("anh", new AnhForm());
         return "adminAnhUpdate";
     }
+
     @PostMapping("/update")
-    public String updateAnh(Model model, RedirectAttributes redirect, @ModelAttribute(name = "data") AnhForm form,
-                         BindingResult result, @RequestParam("imageFile") MultipartFile[] imageFiles, HttpServletRequest request) {
+    public String updateAnh(Model model, RedirectAttributes redirect, @ModelAttribute(name = "anh") AnhForm form,
+                            BindingResult result, @RequestParam("imageFile") MultipartFile[] imageFiles, HttpServletRequest request) {
         if (!result.hasErrors()) {
             Anh anh = service.getByIdA(form.getIdimage());
             Anh a = form.data(anh);
@@ -143,6 +146,7 @@ public class AnhController {
         }
         return "adminAnhUpdate";
     }
+
     @GetMapping("/delete/{id}")
     public String xoaAnh(Model model, @PathVariable(name = "id") UUID id, RedirectAttributes redirect) {
         Anh anh = service.getByIdA(id);
@@ -153,8 +157,9 @@ public class AnhController {
         }
         return "adminAnh";
     }
+
     private boolean isImageFormatValid(MultipartFile file) {
-        String[] allowedExtensions = { "png", "jpg", "jpeg", "gif", "svg" };
+        String[] allowedExtensions = {"png", "jpg", "jpeg", "gif", "svg"};
         String originalFileName = file.getOriginalFilename();
         if (originalFileName != null) {
             String fileExtension = originalFileName.substring(originalFileName.lastIndexOf(".") + 1);

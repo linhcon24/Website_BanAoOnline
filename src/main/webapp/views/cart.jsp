@@ -1,11 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<c:if test="${account.vaitro != null}">
     <style>
         @media (min-width: 1025px) {
             .h-custom {
@@ -42,8 +41,7 @@
             }
         }
     </style>
-</head>
-<body>
+
 <section class="h-100 h-custom" >
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -216,5 +214,10 @@
         </div>
     </div>
 </section>
-</body>
-</html>
+<br>
+<br>
+</c:if>
+<br>
+<c:if test="${account == null}">
+    <h3> Bạn cần đăng nhập để xem giỏ hàng !</h3>
+</c:if>
