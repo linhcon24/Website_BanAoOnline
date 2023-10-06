@@ -20,20 +20,22 @@
 <br>
 <table class="table">
     <tr>
-        <%--            <td>#</td>--%>
-<%--        <td>ID</td>--%>
         <td>Tên Ảnh</td>
+        <td>Ảnh 1</td>
+        <td>Ảnh 2</td>
+        <td>Ảnh 3</td>
+        <td>Ảnh 4</td>
         <td>Chức năng</td>
     </tr>
 
-    <%--        <c:set value="0" var="i" scope="page"></c:set>--%>
     <c:forEach items="${listAnh}" var="p">
-        <%--            <c:set value="${i+1 }" var="i" scope="page" ></c:set>--%>
-        <c:if test="${p.trangthai == 0 }">
+        <c:if test="${p.trangthai == 0}">
             <tr>
-                    <%--                    <td>${i }</td>--%>
-                <td style="display: none">${p.idimage}</td>
                 <td>${p.tenimage}</td>
+                <td><img src="${pageContext.request.contextPath}/views/uploads/${p.imageurl1}" alt="Ảnh 1" width="100" height="100" style="border-radius: 50%;"></td>
+                <td><img src="${pageContext.request.contextPath}/views/uploads/${p.imageurl2}" alt="Ảnh 2" width="100" height="100" style="border-radius: 50%;"></td>
+                <td><img src="${pageContext.request.contextPath}/views/uploads/${p.imageurl3}" alt="Ảnh 3" width="100" height="100" style="border-radius: 50%;"></td>
+                <td><img src="${pageContext.request.contextPath}/views/uploads/${p.imageurl4}" alt="Ảnh 4" width="100" height="100" style="border-radius: 50%;"></td>
                 <td>
                     <button type="button" class="btn btn-danger btnSua"><a
                             href="${pageContext.request.contextPath}/admin/anhs/update/${p.idimage }"><i

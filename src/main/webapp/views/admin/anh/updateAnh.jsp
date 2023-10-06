@@ -7,7 +7,7 @@
 <div class="container">
     <h1> Sửa Ảnh</h1>
     <%--@elvariable id="anh" type=""--%>
-    <f:form action="${pageContext.request.contextPath}/admin/anhs/update" method="POST" modelAttribute="anh">
+    <f:form action="${pageContext.request.contextPath}/admin/anhs/update" method="POST" modelAttribute="anh" enctype="multipart/form-data">
         <f:input type="hidden" class="form-control" id="exampleInputEmail1" name="idimage"
                  value="${anh1.idimage }" path="idimage"/>
         <label for="exampleInputEmail1"> Tên <span style="color:red">*</span> :</label>
@@ -15,25 +15,22 @@
                  value="${anh1.tenimage }" path="tenimage"/>
         <f:errors style="color:red" path="tenimage" element="div"></f:errors>
 
-        <label for="exampleInputEmail1"> Đường dẫn 1 <span style="color:red">*</span> :</label>
-        <f:input type="text" class="form-control" id="exampleInputEmail1" name="imageurl1"
-                 value="${anh1.imageurl1 }" path="imageurl1"/>
+        <label for="exampleInputImage1"> Ảnh 1 <span style="color:red">*</span> :</label>
+        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile"/>
         <f:errors style="color:red" path="imageurl1" element="div"></f:errors>
 
-        <label for="exampleInputEmail1"> Đường dẫn 2 <span style="color:red">*</span> :</label>
-        <f:input type="text" class="form-control" id="exampleInputEmail1" name="imageurl2"
-                 value="${anh1.imageurl2 }" path="imageurl2"/>
+        <label for="exampleInputImage2"> Ảnh 2 <span style="color:red">*</span> :</label>
+        <input type="file" class="form-control" id="exampleInputImage2" name="imageFile"/>
         <f:errors style="color:red" path="imageurl2" element="div"></f:errors>
 
-        <label for="exampleInputEmail1"> Đường dẫn 3 <span style="color:red">*</span> :</label>
-        <f:input type="text" class="form-control" id="exampleInputEmail1" name="imageurl3"
-                 value="${anh1.imageurl3 }" path="imageurl3"/>
+        <label for="exampleInputImage3"> Ảnh 3 <span style="color:red">*</span> :</label>
+        <input type="file" class="form-control" id="exampleInputImage3" name="imageFile"/>
         <f:errors style="color:red" path="imageurl3" element="div"></f:errors>
 
-        <label for="exampleInputEmail1"> Đường dẫn 4 <span style="color:red">*</span> :</label>
-        <f:input type="text" class="form-control" id="exampleInputEmail1" name="imageurl4"
-                 value="${anh1.imageurl4 }" path="imageurl4"/>
+        <label for="exampleInputImage4"> Ảnh 4 <span style="color:red">*</span> :</label>
+        <input type="file" class="form-control" id="exampleInputImage4" name="imageFile"/>
         <f:errors style="color:red" path="imageurl4" element="div"></f:errors>
+
         <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Sửa</button>
 
