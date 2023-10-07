@@ -113,8 +113,8 @@ public class HomePage {
         }
         if (!result.hasErrors()) {
             if (taiKhoanService.getByUsername(form.getUsername()) != null) {
-                redirect.addFlashAttribute("message", "Username đã tồn tại trên hệ thống !");
-                redirect.addFlashAttribute("type", "error");
+                request.setAttribute("message", "Username đã tồn tại trên hệ thống !");
+                request.setAttribute("type", "error");
                 return "registerPage";
             }
             if (!password.equals(repassword)) {

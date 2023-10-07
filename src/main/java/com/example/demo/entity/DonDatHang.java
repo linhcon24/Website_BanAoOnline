@@ -41,10 +41,6 @@ public class DonDatHang implements Serializable {
     private TaiKhoan taiKhoan;
 
     @ManyToOne
-    @JoinColumn(name = "idphuongthucthanhtoan")
-    private PhuongThucThanhToan phuongThucThanhToan;
-
-    @ManyToOne
     @JoinColumn(name = "idhoadon")
     private HoaDon hoaDon;
 

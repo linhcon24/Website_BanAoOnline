@@ -110,7 +110,7 @@
                 <div class="collapse-divider"></div>
                 <h6 class="collapse-header">Other Pages:</h6>
                 <a class="collapse-item" href="/403">403 Page</a>
-                <a class="collapse-item" href="blank.html">Blank Page</a>
+                <a class="collapse-item" href="">Blank Page</a>
             </div>
         </div>
     </li>

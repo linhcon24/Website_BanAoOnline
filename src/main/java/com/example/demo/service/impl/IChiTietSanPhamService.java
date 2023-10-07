@@ -31,7 +31,7 @@ public class IChiTietSanPhamService implements ChiTietSanPhamService {
     }
 
     @Override
-    public Optional<ChiTietSanPham> getById(UUID id) {
+    public Optional<ChiTietSanPham> getById(Integer id) {
         return repository.findById(id);
     }
 
@@ -56,7 +56,7 @@ public class IChiTietSanPhamService implements ChiTietSanPhamService {
     }
 
     @Override
-    public ChiTietSanPham getByIdCTSP(UUID id) {
+    public ChiTietSanPham getByIdCTSP(Integer id) {
         return repository.getById(id);
     }
 }

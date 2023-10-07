@@ -20,8 +20,8 @@ import java.util.UUID;
 public class ChiTietSanPham implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID idctsp;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idctsp;
     private BigDecimal gianhap;
     private BigDecimal giaban;
     private String mota;

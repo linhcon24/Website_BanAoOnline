@@ -190,9 +190,9 @@
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small" value="${account.idtaikhoan}">${account.username}</span>
                         <img class="img-profile rounded-circle"
-                             src="../views/admin/img/undraw_profile.svg">
+                             src="${pageContext.request.contextPath}/views/img/${account.image}">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -210,7 +210,7 @@
                             Activity Log
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <a class="dropdown-item" href="/admin/logout" data-toggle="modal" data-target="#logoutModal" onclick="dangXuat()">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
                         </a>
@@ -231,27 +231,27 @@
 
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Bạn có muốn đăng xuất?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">HIHI</span>
-                </button>
-            </div>
-            <div class="modal-body">Ấn "Ok" để đăng xuất tài khoản!</div>
+<%--<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"--%>
+<%--     aria-hidden="true">--%>
+<%--    <div class="modal-dialog" role="document">--%>
+<%--        <div class="modal-content">--%>
+<%--            <div class="modal-header">--%>
+<%--                <h5 class="modal-title" id="exampleModalLabel">Bạn có muốn đăng xuất?</h5>--%>
+<%--                <button class="close" type="button" data-dismiss="modal" aria-label="Close">--%>
+<%--                    <span aria-hidden="true">HIHI</span>--%>
+<%--                </button>--%>
+<%--            </div>--%>
+<%--            <div class="modal-body">Ấn "Ok" để đăng xuất tài khoản!</div>--%>
 
 
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="/login">Logout</a>
+<%--            <div class="modal-footer">--%>
+<%--                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>--%>
+<%--                <a class="btn btn-primary" href="/login">Logout</a>--%>
 
-            </div>
-        </div>
-    </div>
-</div>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</div>--%>
 <script>
     function dangXuat() {
         Swal.fire({

@@ -11,9 +11,9 @@ public interface ChiTietSanPhamService {
 
     public Page<ChiTietSanPham> getAll(Integer pageNum , Integer pageSize);
     public List<ChiTietSanPham> count();
-    public Optional<ChiTietSanPham> getById(UUID id);
+    public Optional<ChiTietSanPham> getById(Integer id);
     public ChiTietSanPham add(ChiTietSanPham chiTietSanPham);
     public ChiTietSanPham update(ChiTietSanPham chiTietSanPham);
     public ChiTietSanPham delete(ChiTietSanPham chiTietSanPham);
-    public ChiTietSanPham getByIdCTSP(UUID id);
+    public ChiTietSanPham getByIdCTSP(Integer id);
 }

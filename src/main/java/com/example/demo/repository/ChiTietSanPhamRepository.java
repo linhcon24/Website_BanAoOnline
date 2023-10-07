@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Repository
-public interface ChiTietSanPhamRepository extends JpaRepository<ChiTietSanPham, UUID> {
+public interface ChiTietSanPhamRepository extends JpaRepository<ChiTietSanPham, Integer> {
 
     @Query(value = "Select e from ChiTietSanPham e where e.trangthai = 0")
     Page<ChiTietSanPham> phantrang(Pageable pageable);
