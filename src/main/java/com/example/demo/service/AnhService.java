@@ -9,6 +9,7 @@ import java.util.UUID;
 
 public interface AnhService {
     public Page<Anh> getAll(Integer pageNum , Integer pageSize);
+    public List<Anh> getAll2();
     public List<Anh> count();
     public Optional<Anh> getById(UUID id);
     public Anh add(Anh anh);

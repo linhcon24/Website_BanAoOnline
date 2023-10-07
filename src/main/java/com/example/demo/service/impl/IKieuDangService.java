@@ -25,6 +25,11 @@ public class IKieuDangService implements KieuDangService {
     }
 
     @Override
+    public List<KieuDang> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<KieuDang> count() {
         return repository.countPhanTrang();
     }

@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface MauSacService {
 
     public Page<MauSac> getAll(Integer pageNum , Integer pageSize);
+    public List<MauSac> getAll2();
     public List<MauSac> count();
     public Optional<MauSac> getById(Integer id);
     public MauSac add(MauSac mauSac);

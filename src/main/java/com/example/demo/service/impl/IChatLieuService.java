@@ -25,6 +25,11 @@ public class IChatLieuService implements ChatLieuService {
     }
 
     @Override
+    public List<ChatLieu> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<ChatLieu> count() {
         return repository.countPhanTrang();
     }

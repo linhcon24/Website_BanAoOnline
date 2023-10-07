@@ -26,6 +26,11 @@ public class IThuongHieuService implements ThuongHieuService {
     }
 
     @Override
+    public List<ThuongHieu> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<ThuongHieu> count() {
         return repository.countPhanTrang();
     }

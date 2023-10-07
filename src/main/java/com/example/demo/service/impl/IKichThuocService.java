@@ -25,6 +25,11 @@ public class IKichThuocService implements KichThuocService {
     }
 
     @Override
+    public List<KichThuoc> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<KichThuoc> count() {
         return repository.countPhanTrang();
     }

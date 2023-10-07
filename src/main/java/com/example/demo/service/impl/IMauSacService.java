@@ -25,6 +25,11 @@ public class IMauSacService implements MauSacService {
     }
 
     @Override
+    public List<MauSac> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<MauSac> count() {
         return repository.countPhanTrang();
     }

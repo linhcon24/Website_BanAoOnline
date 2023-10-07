@@ -26,6 +26,11 @@ public class IAnhService implements AnhService {
     }
 
     @Override
+    public List<Anh> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<Anh> count() {
         return repository.countPhanTrang();
     }

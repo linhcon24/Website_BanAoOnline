@@ -10,6 +10,8 @@ import java.util.UUID;
 public interface KhuyenMaiService {
     Page<KhuyenMai> getAll(Integer pageNum, Integer pageSize);
 
+    public List<KhuyenMai> getAll2();
+
     List<KhuyenMai> count();
 
     Optional<KhuyenMai> getById(Integer id);

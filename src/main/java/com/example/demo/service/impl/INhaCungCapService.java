@@ -25,6 +25,11 @@ public class INhaCungCapService implements NhaCungCapService {
     }
 
     @Override
+    public List<NhaCungCap> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<NhaCungCap> count() {
         return repository.countPhanTrang();
     }

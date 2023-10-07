@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface NhaCungCapService {
 
     public Page<NhaCungCap> getAll(Integer pageNum , Integer pageSize);
+    public List<NhaCungCap> getAll2();
     public List<NhaCungCap> count();
     public Optional<NhaCungCap> getById(Integer id);
     public NhaCungCap add(NhaCungCap nhaCungCap);

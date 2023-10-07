@@ -24,6 +24,11 @@ public class iKhuyenMaiService implements KhuyenMaiService {
     }
 
     @Override
+    public List<KhuyenMai> getAll2() {
+        return repository.findAll();
+    }
+
+    @Override
     public List<KhuyenMai> count() {
         return repository.countPhanTrang();
     }

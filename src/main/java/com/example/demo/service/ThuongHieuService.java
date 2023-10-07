@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface ThuongHieuService {
 
     public Page<ThuongHieu> getAll(Integer pageNum , Integer pageSize);
+    public List<ThuongHieu> getAll2();
     public List<ThuongHieu> count();
     public Optional<ThuongHieu> getById(Integer id);
     public ThuongHieu add(ThuongHieu thuongHieu);

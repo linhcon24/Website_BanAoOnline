@@ -8,6 +8,7 @@ import java.util.Optional;
 
 public interface KichThuocService {
     public Page<KichThuoc> getAll(Integer pageNum , Integer pageSize);
+    public List<KichThuoc> getAll2();
     public List<KichThuoc> count();
     public Optional<KichThuoc> getById(Integer id);
     public KichThuoc add(KichThuoc kichThuoc);
