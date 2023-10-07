@@ -1,4 +1,10 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -69,10 +75,13 @@
                                 </div>
                                 <h6 class="text-success">Free shipping</h6>
                                 <div class="d-flex flex-column mt-4">
-                                    <button class="btn btn-primary btn-sm" type="button">Details</button>
-                                    <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-                                        Add to wishlist
-                                    </button>
+
+                                        <button class="btn btn-primary btn-sm" type="button">Details</button>
+                                    <form action="${pageContext.request.contextPath }/product/add-to-cart" method="post">
+                                        <button class="btn btn-outline-primary btn-sm mt-2" type="submit" >
+                                            Add to wishlist
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -20,7 +20,7 @@ public class GioHangChiTiet implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idgiohangchitiet;
     private Integer soluong;
-    private Double donGia;
+    private Double dongia;
 
     @ManyToOne
     @JoinColumn(name = "idgiohang")

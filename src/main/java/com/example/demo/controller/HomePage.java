@@ -2,13 +2,13 @@ package com.example.demo.controller;
 
 import com.example.demo.bean.ChangeForm;
 import com.example.demo.entity.ChiTietSanPham;
+import com.example.demo.entity.GioHangChiTiet;
 import com.example.demo.entity.TaiKhoan;
 import com.example.demo.service.ChiTietSanPhamService;
+import com.example.demo.service.GioHangChiTietService;
 import com.example.demo.service.TaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import com.example.demo.bean.ForgetForm;
 import com.example.demo.bean.LoginForm;
 import com.example.demo.bean.RegisterForm;
@@ -32,7 +32,12 @@ public class HomePage {
 
     @Autowired
     private ChiTietSanPhamService chiTietSanPhamService;
+
+    @Autowired
+    private GioHangChiTietService gioHangChiTietService;
+
     private Page<ChiTietSanPham> listChiTietSanPham;
+    private Page<GioHangChiTiet> listGioHangChiTiet;
 
     @RequestMapping(value = {"", "/", "/index", "/home"})
     public String homePage(Model model) {
@@ -160,9 +165,13 @@ public class HomePage {
     }
 
     @GetMapping("/cart")
-    public String cart() {
+    public String cart(Model model,@RequestParam(defaultValue = "0",name = "num")Integer num){
+        TaiKhoan tk = (TaiKhoan) session.getAttribute("account");
+        listGioHangChiTiet = gioHangChiTietService.getAll(num, 4, tk.getIdtaikhoan());
+        model.addAttribute("listGioHangChiTiet",listGioHangChiTiet);
         return "cartPage";
     }
+
 
     @GetMapping("/product")
     public String product(Model model,@RequestParam(defaultValue = "0",name = "num")Integer num) {
