@@ -29,6 +29,7 @@
         </f:select>
         <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Sửa</button>
+    <a href="/admin/danh-gia-san-pham"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
 
     </f:form>
 

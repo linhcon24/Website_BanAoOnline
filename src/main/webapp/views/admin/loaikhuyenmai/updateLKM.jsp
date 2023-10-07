@@ -50,6 +50,7 @@
         <br>
         <br>
         <button type="submit" class="btn btn-warning"><i class="fa-solid fa-plus"></i> Sửa</button>
+        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-plus"></i><a href="/admin/loai-khuyen-mai/back">Back</a></button>
 
     </f:form>
 </div>

@@ -51,6 +51,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
                 <a class="collapse-item" href="/admin/tai-khoan">Tài Khoản</a>
+                <a class="collapse-item" href="/admin/sanpham">Sản Phẩm</a>
                 <a class="collapse-item" href="/admin/thuong-hieu">Thương Hiệu</a>
                 <a class="collapse-item" href="/admin/anhs">Ảnh</a>
                 <a class="collapse-item" href="/admin/chat-lieu">Chất Liệu</a>

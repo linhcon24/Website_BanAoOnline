@@ -18,6 +18,7 @@
         <f:errors style="color:red" path="tensanpham" element="div"></f:errors>
         <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Sửa</button>
+    <a href="/admin/sanpham"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
 
     </f:form>
 </div>

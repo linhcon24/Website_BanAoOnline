@@ -21,6 +21,7 @@ public class GioHangChiTiet implements Serializable {
     private UUID idgiohangchitiet;
     private Integer soluong;
     private Double dongia;
+    private Integer giamgia;
 
     @ManyToOne
     @JoinColumn(name = "idgiohang")

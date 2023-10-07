@@ -6,9 +6,9 @@
          pageEncoding="UTF-8" %>
 
 <div class="container">
-    <h1> Thêm Kích Thước</h1>
+    <h1> Thêm Bài Đăng</h1>
     <p style="color: red">${message }</p>
-    <%--@elvariable id="kt" type=""--%>
+    <%--@elvariable id="bd" type=""--%>
     <f:form modelAttribute="bd" action="${pageContext.request.contextPath}/admin/bai-dang/add" method="POST"
             enctype="multipart/form-data">
 
@@ -52,6 +52,7 @@
             </c:forEach>
         </f:select> <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Thêm</button>
+    <a href="/admin/bai-dang"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
 
     </f:form>
 </div>

@@ -55,6 +55,8 @@
         </f:select>
         <br>
         <button type="submit" class="btn btn-info"><i class="fa-solid fa-plus"></i> Thêm</button>
+    <a href="/admin/tai-khoan"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
+
 
     </f:form>
 </div>

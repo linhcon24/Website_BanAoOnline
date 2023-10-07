@@ -94,6 +94,25 @@
 <!-- Page level custom scripts -->
 <script src="${pageContext.request.contextPath}/views/admin/js/demo/chart-area-demo.js"></script>
 <script src="${pageContext.request.contextPath}/views/admin/js/demo/chart-pie-demo.js"></script>
+
+<%--<script>--%>
+
+<%--    function xoa(){--%>
+<%--        Swal.fire({--%>
+<%--            title: 'Bạn có muốn xóa?',--%>
+<%--            text: "You won't be able to revert this!",--%>
+<%--            icon: 'warning',--%>
+<%--            showCancelButton: true,--%>
+<%--            confirmButtonColor: '#3085d6',--%>
+<%--            cancelButtonColor: '#d33',--%>
+<%--            confirmButtonText: 'OK!'--%>
+<%--        }).then((result) => {--%>
+<%--            if (result.isConfirmed) {--%>
+<%--                Swal.fire('Xóa thành công !', '', 'success');--%>
+<%--            }--%>
+<%--        })--%>
+<%--    }--%>
+<%--</script>--%>
 </body>
 
 </html>

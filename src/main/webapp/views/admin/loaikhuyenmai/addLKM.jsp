@@ -48,7 +48,8 @@
         <br>
 
         <button type="submit" class="btn btn-info"><i class="fa-solid fa-plus"></i> Thêm</button>
-        <button type="button" class="btn btn-info"><i class="fa-solid fa-plus"></i><a href="/admin/loai-khuyen-mai/back">back</a></button>
+
+        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-plus"></i><a href="/admin/loai-khuyen-mai/back">Back</a></button>
     </f:form>
 </div>
 <br>

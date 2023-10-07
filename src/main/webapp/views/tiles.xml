@@ -344,6 +344,24 @@
                        value="/views/admin/taikhoan/updateTK.jsp"/>
     </definition>
 
+    <definition name="adminSP" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Sản Phẩm Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/sanpham/sanpham.jsp"/>
+    </definition>
+
+    <definition name="adminSPAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Sản Phẩm Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/sanpham/addSP.jsp"/>
+    </definition>
+
+    <definition name="adminSPUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin Sản Phẩm Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/sanpham/updateSP.jsp"/>
+    </definition>
+
 
     <definition name="tablePage" extends="baseAD.definition">
         <put-attribute name="title-admin" value="Admin Table Page"/>

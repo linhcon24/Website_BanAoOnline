@@ -24,7 +24,7 @@
         <f:errors style="color:red" path="tenmausac" element="div"></f:errors>
         <br>
         <button type="submit" class="btn btn-info"><i class="fa-solid fa-plus"></i> Thêm</button>
-        <button type="button" class="btn btn-info"><i class="fa-solid fa-plus"></i><a href="/admin/mau-sac/back">back</a></button>
+    <a href="/admin/mau-sac"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
     </f:form>
 </div>
 <br>

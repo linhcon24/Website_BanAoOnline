@@ -6,7 +6,7 @@
          pageEncoding="UTF-8" %>
 <div class="container">
     <h1> Sửa Bài Đăng</h1>
-    <%--@elvariable id="kt" type=""--%>
+    <%--@elvariable id="bd" type=""--%>
     <f:form action="${pageContext.request.contextPath}/admin/bai-dang/update" method="POST" modelAttribute="bd">
 
         <label for="exampleInputEmail1"> ID <span style="color:red">*</span> :</label>
@@ -53,6 +53,7 @@
             </c:forEach>
         </f:select> <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Sửa</button>
+    <a href="/admin/bai-dang"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
 
     </f:form>
 </div>

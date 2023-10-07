@@ -16,6 +16,7 @@
         <f:errors style="color:red" path="tenchatlieu" element="div"></f:errors>
         <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Sửa</button>
+    <a href="/admin/chat-lieu"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
 
     </f:form>
 </div>

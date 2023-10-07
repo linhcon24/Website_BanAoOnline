@@ -23,6 +23,7 @@
         <f:errors style="color:red" path="tenmausac" element="div"></f:errors>
         <br>
         <button type="submit" class="btn btn-warning"><i class="fa-solid fa-plus"></i> Sửa</button>
+    <a href="/admin/mau-sac"><button type="submit" class="btn btn-secondary" ><i class="fa-solid fa-rotate-right"></i> Back</button>
 
     </f:form>
 </div>
