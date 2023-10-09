@@ -20,7 +20,7 @@
 <body>
 <section style="background-color: #eee;">
     <div class="container py-5">
-        <c:forEach items="${list.content}"  var="chiTietSanPham">
+        <c:forEach items="${list.content}"  var="sanPham">
             <div class="row justify-content-center mb-3">
             <div class="col-md-12 col-xl-10">
                 <div class="card shadow-0 border rounded-3">
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-xl-6">
-                                <h5>${chiTietSanPham.sanPham.tensanpham}</h5>
+                                <h5>${sanPham.tensanpham}</h5>
                                 <div class="d-flex flex-row">
                                     <div class="text-danger mb-1 me-2">
                                         <i class="fa fa-star"></i>

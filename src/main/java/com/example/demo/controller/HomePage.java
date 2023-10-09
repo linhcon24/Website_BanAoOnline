@@ -3,9 +3,11 @@ package com.example.demo.controller;
 import com.example.demo.bean.ChangeForm;
 import com.example.demo.entity.ChiTietSanPham;
 import com.example.demo.entity.GioHangChiTiet;
+import com.example.demo.entity.SanPham;
 import com.example.demo.entity.TaiKhoan;
 import com.example.demo.service.ChiTietSanPhamService;
 import com.example.demo.service.GioHangChiTietService;
+import com.example.demo.service.SanPhamService;
 import com.example.demo.service.TaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -34,9 +36,13 @@ public class HomePage {
     private ChiTietSanPhamService chiTietSanPhamService;
 
     @Autowired
+    private SanPhamService sanPhamService;
+
+    @Autowired
     private GioHangChiTietService gioHangChiTietService;
 
     private Page<ChiTietSanPham> listChiTietSanPham;
+    private Page<SanPham> listSanPham;
     private Page<GioHangChiTiet> listGioHangChiTiet;
 
     @RequestMapping(value = {"", "/", "/index", "/home"})
@@ -175,8 +181,8 @@ public class HomePage {
 
     @GetMapping("/product")
     public String product(Model model,@RequestParam(defaultValue = "0",name = "num")Integer num) {
-        listChiTietSanPham = chiTietSanPhamService.getAll(num,4);
-        model.addAttribute("list",listChiTietSanPham);
+        listSanPham = sanPhamService.getAll(num,4);
+        model.addAttribute("list",listSanPham);
         return "productPage";
     }
 }
