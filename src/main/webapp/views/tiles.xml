@@ -362,6 +362,26 @@
                        value="/views/admin/sanpham/updateSP.jsp"/>
     </definition>
 
+    <definition name="adminCTSP" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin CTSP Page"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/chitietsanpham/chi-tiet-sp.jsp"/>
+    </definition>
+
+    <definition name="adminCTSPAdd" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin CTSP Add"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/chitietsanpham/addCTSP.jsp"/>
+    </definition>
+
+    <definition name="adminCTSPUpdate" extends="baseAD.definition">
+        <put-attribute name="title-admin" value="Admin CTSP Update"/>
+        <put-attribute name="body-admin"
+                       value="/views/admin/chitietsanpham/updateCTSP.jsp"/>
+    </definition>
+
+
+
 
     <definition name="tablePage" extends="baseAD.definition">
         <put-attribute name="title-admin" value="Admin Table Page"/>

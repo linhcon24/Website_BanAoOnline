@@ -40,17 +40,23 @@
         <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngayketthuc" path="ngayketthuc"/>
         <br>
 
-        <label for="exampleInputEmail1"> Ngày Tạo <span style="color:red">*</span> :</label>
-        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaytao" path="ngaytao"/>
-        <br>
+<%--        <label for="exampleInputEmail1"> Ngày Tạo <span style="color:red">*</span> :</label>--%>
+<%--        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaytao" path="ngaytao"/>--%>
+<%--        <br>--%>
 
-        <label for="exampleInputEmail1"> Ngày Cập Nhật <span style="color:red">*</span> :</label>
-        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaycapnhat" path="ngaycapnhat"/>
+<%--        <label for="exampleInputEmail1"> Ngày Cập Nhật <span style="color:red">*</span> :</label>--%>
+<%--        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaycapnhat" path="ngaycapnhat"/>--%>
         <br>
+    <label for="exampleInputEmail1"> Trạng Thái <span style="color:red">*</span> :</label>
+    <f:select class="form-control" id="exampleFormControlSelect1"
+    name="trangthai" path="trangthai">
+        <option value="0">Đang khuyến mãi</option>
+        <option value="1">Dừng khuyến mãi</option>
+    </f:select>
 
-        <label for="exampleInputEmail1"> Trạng Thái <span style="color:red">*</span> :</label>
-        <f:input type="text" class="form-control" id="exampleInputEmail1" name="trangthai" path="trangthai"/>
-        <f:errors style="color:red" path="trangthai" element="div"></f:errors>
+<%--        <label for="exampleInputEmail1"> Trạng Thái <span style="color:red">*</span> :</label>--%>
+<%--        <f:input type="text" class="form-control" id="exampleInputEmail1" name="trangthai" path="trangthai"/>--%>
+<%--        <f:errors style="color:red" path="trangthai" element="div"></f:errors>--%>
         <br>
 
         <label> Loại Khuyến Mãi:  <span style="color:red">*</span> :</label>

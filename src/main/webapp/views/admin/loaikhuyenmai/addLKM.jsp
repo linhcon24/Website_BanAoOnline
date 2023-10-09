@@ -13,9 +13,9 @@
          pageEncoding="UTF-8" %>
 
 <div class="container">
-    <h1> Thêm Màu Sắc </h1>
+    <h1> Thêm Loại Khuyến Mại   </h1>
     <p style="color: red">${message }</p>
-    <%--@elvariable id="ms" type=""--%>
+    <%--@elvariable id="lkm" type=""--%>
     <f:form modelAttribute="lkm" action="${pageContext.request.contextPath}/admin/loai-khuyen-mai/add" method="POST"
             enctype="multipart/form-data">
 
@@ -29,22 +29,22 @@
         <f:errors style="color:red" path="tenloaikhuyenmai" element="div"></f:errors>
         <br>
 
-        <label for="exampleInputEmail1"> Ngày Tạo <span style="color:red">*</span> :</label>
-        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaytao" path="ngaytao"/>
-        <br>
+<%--        <label for="exampleInputEmail1"> Ngày Tạo <span style="color:red">*</span> :</label>--%>
+<%--        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaytao" path="ngaytao"/>--%>
+<%--        <br>--%>
 
-        <label for="exampleInputEmail1"> Ngày Cập Nhật <span style="color:red">*</span> :</label>
-        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaycapnhat" path="ngaycapnhat"/>
-        <br>
+<%--        <label for="exampleInputEmail1"> Ngày Cập Nhật <span style="color:red">*</span> :</label>--%>
+<%--        <f:input type="date" class="form-control" id="exampleInputEmail1" name="ngaycapnhat" path="ngaycapnhat"/>--%>
+<%--        <br>--%>
 
-        <label for="exampleInputEmail1"> Người Cập Nhật <span style="color:red">*</span> :</label>
-        <f:input type="text" class="form-control" id="exampleInputEmail1" name="nguoicapnhat" path="nguoicapnhat"/>
-        <f:errors style="color:red" path="nguoicapnhat" element="div"></f:errors>
-        <br>
+<%--        <label for="exampleInputEmail1"> Người Cập Nhật <span style="color:red">*</span> :</label>--%>
+<%--        <f:input type="text" class="form-control" id="exampleInputEmail1" name="nguoicapnhat" path="nguoicapnhat"/>--%>
+<%--        <f:errors style="color:red" path="nguoicapnhat" element="div"></f:errors>--%>
+<%--        <br>--%>
 
-        <label for="exampleInputEmail1"> Trang Thái <span style="color:red">*</span> :</label>
-        <f:input type="text" class="form-control" id="exampleInputEmail1" name="trangthai" path="trangthai"/>
-        <f:errors style="color:red" path="trangthai" element="div"></f:errors>
+<%--        <label for="exampleInputEmail1"> Trang Thái <span style="color:red">*</span> :</label>--%>
+<%--        <f:input type="text" class="form-control" id="exampleInputEmail1" name="trangthai" path="trangthai"/>--%>
+<%--        <f:errors style="color:red" path="trangthai" element="div"></f:errors>--%>
         <br>
 
         <button type="submit" class="btn btn-info"><i class="fa-solid fa-plus"></i> Thêm</button>

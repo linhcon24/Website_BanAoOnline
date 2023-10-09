@@ -7,8 +7,6 @@
 
 
 
-
-
 <br>
 <%--<c:if test="${account.role == 0 }">--%>
 <h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Chi Tiết Sản Phẩm</h1>

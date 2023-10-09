@@ -28,8 +28,6 @@
         <td>chietkhau</td>
         <td>ngaybatdau</td>
         <td>ngayketthuc</td>
-        <td>ngaytao</td>
-        <td>ngaycapnhat</td>
         <td>trangthai</td>
         <td>loaiKhuyenMai</td>
         <td>Chức năng</td>
@@ -45,12 +43,10 @@
                 <td>${p.makhuyenmai}</td>
                 <td>${p.tenkhuyenmai}</td>
                 <td>${p.mota}</td>
-                <td>${p.chietkhau}</td>
+                <td>${p.chietkhau}%</td>
                 <td>${p.ngaybatdau}</td>
                 <td>${p.ngayketthuc}</td>
-                <td>${p.ngaytao}</td>
-                <td>${p.ngaycapnhat}</td>
-                <td>${p.trangthai}</td>
+                <td>${p.trangthai == 0 ? 'Đang khuyến mãi' : 'Dừng khuyến mãi'}</td>
                 <td>${p.loaiKhuyenMai.idloaikhuyenmai}</td>
                 <td>
                     <button type="button" class="btn btn-danger btnSua"><a

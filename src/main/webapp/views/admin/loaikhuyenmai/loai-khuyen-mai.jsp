@@ -13,15 +13,13 @@
          pageEncoding="UTF-8" %>
 
 
-
-
-
 <br>
 <%--<c:if test="${account.role == 0 }">--%>
-<h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Loại Khuyến Mại  </h1>
+<h1 style="text-align: center;"><i class="fa-solid fa-file-invoice"></i> Quản Lý Loại Khuyến Mại </h1>
 <br>
 <div class="btnThem">
-    <button type="button" class="btn btn-info"><a href="${pageContext.request.contextPath }/admin/loai-khuyen-mai/add"><i
+    <button type="button" class="btn btn-info"><a
+            href="${pageContext.request.contextPath }/admin/loai-khuyen-mai/add"><i
             class="fa-solid fa-circle-plus"></i> Thêm loại khuyến mãi </a></button>
 </div>
 <br>
@@ -29,13 +27,9 @@
     <tr>
         <%--            <td>#</td>--%>
         <td>ID</td>
-        <td>Mã </td>
-        <td>Tên </td>
-        <td>Ngày Tạo </td>
-        <td>Ngày Cập Nhật </td>
-        <td>Người Cập Nhật </td>
-        <td>Trạng Thái </td>
-        <td >Chức năng</td>
+        <td>Mã</td>
+        <td>Tên</td>
+        <td>Chức năng</td>
     </tr>
 
     <%--        <c:set value="0" var="i" scope="page"></c:set>--%>
@@ -47,10 +41,6 @@
                 <td>${p.idloaikhuyenmai}</td>
                 <td>${p.maloaikhuyenmai}</td>
                 <td>${p.tenloaikhuyenmai}</td>
-                <td>${p.ngaytao}</td>
-                <td>${p.ngaycapnhat}</td>
-                <td>${p.nguoicapnhat}</td>
-                <td>${p.trangthai}</td>
                 <td>
                     <button type="button" class="btn btn-warning btnSua"><a
                             href="${pageContext.request.contextPath}/admin/loai-khuyen-mai/update/${p.idloaikhuyenmai}"><i
@@ -58,9 +48,9 @@
                     <button type="button" class="btn btn-danger btnSua"><a
                             href="${pageContext.request.contextPath}/admin/loai-khuyen-mai/delete/${p.idloaikhuyenmai }"><i
                             class="fa-solid fa-trash"></i> Xóa</a></button>
-                    <button type="button" class="btn btn-danger btnSua"><a
+                    <button type="button" class="btn btn-info btnSua"><a
                             href="${pageContext.request.contextPath}/admin/loai-khuyen-mai/detail/${p.idloaikhuyenmai }"><i
-                            class="fa-solid fa-trash"></i> Xem Chi Tiết</a></button>
+                            class="fa-solid fa-circle-info"></i> Xem Chi Tiết</a></button>
                 </td>
             </tr>
         </c:if>
