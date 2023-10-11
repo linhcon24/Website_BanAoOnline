@@ -73,10 +73,10 @@
                             <c:when test="${account != null }">
                                 <div class="dropdown-menu drop" aria-labelledby="dropdownMenuLink">
                                     <div class="nutdrop">
+                                        <a class="dropdown-item"
+                                           href="${pageContext.request.contextPath}/profile">Profile</a>
                                         <a class="dropdown-item" href="${pageContext.request.contextPath}/change">Đổi mật
                                             khẩu</a>
-<%--                                     <a class="dropdown-item"--%>
-<%--                                                        href="${pageContext.request.contextPath}/myorder">Test</a> --%>
                                         <a class="dropdown-item" href="#" onclick="dangXuat()">Logout</a>
                                     </div>
                                 </div>

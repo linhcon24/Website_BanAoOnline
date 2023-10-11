@@ -41,8 +41,8 @@
 
         <br>
         <label for="exampleInputEmail1"> Giới Tính <span style="color:red">*</span>:</label>
-        <input type="radio" name="gioitinh" path="gioitinh" value="true" checked="checked"/>Nam
-        <input type="radio" name="gioitinh" path="gioitinh" value="false"/>Nữ
+    <input type="radio" name="gioitinh" path="gioitinh" value="true" ${account.gioitinh == true ? 'checked' : ''}/> Nam
+    <input type="radio" name="gioitinh" path="gioitinh" value="false" ${account.gioitinh == false ? 'checked' : ''}/> Nữ
 
         <f:errors style="color:red" path="sdt" element="gioitinh"></f:errors>
         <br>

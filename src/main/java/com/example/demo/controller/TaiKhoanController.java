@@ -75,9 +75,9 @@ public class TaiKhoanController {
                 Path path = Paths.get(pathFolder + file.getOriginalFilename());
                 Files.write(path, bytes);
 
-                TaiKhoan taiKhoan = form.data(null);
-                taiKhoan.setTrangthai(0);
-                if (service.add(taiKhoan) != null) {
+                TaiKhoan account = form.data(null);
+                account.setTrangthai(0);
+                if (service.add(account) != null) {
                     redirect.addFlashAttribute("message", "Thêm thành công !");
                     redirect.addFlashAttribute("type", "success");
                     return "redirect:/admin/tai-khoan";
@@ -108,8 +108,8 @@ public class TaiKhoanController {
         //Khong loi
         if (!result.hasErrors()) {
             try {
-                TaiKhoan taiKhoan = service.getAccountById(form.getIdtaikhoan());
-                TaiKhoan acc = form.data(taiKhoan);
+                TaiKhoan account = service.getAccountById(form.getIdtaikhoan());
+                TaiKhoan acc = form.data(account);
                 String anh = "";
                 if (file.isEmpty()) {
                     anh = acc.getImage();
