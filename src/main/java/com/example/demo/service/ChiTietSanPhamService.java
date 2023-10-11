@@ -16,4 +16,6 @@ public interface ChiTietSanPhamService {
     public ChiTietSanPham update(ChiTietSanPham chiTietSanPham);
     public ChiTietSanPham delete(ChiTietSanPham chiTietSanPham);
     public ChiTietSanPham getByIdCTSP(Integer id);
+    public List<ChiTietSanPham> getListByIdSanPham(Integer idSanPham);
+//    public List<ChiTietSanPham> getListSPByMSandKT(Integer idSanPham, Integer idMauSac, Integer idKichThuoc);
 }

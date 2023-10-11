@@ -59,4 +59,16 @@ public class IChiTietSanPhamService implements ChiTietSanPhamService {
     public ChiTietSanPham getByIdCTSP(Integer id) {
         return repository.getById(id);
     }
+
+    @Override
+    public List<ChiTietSanPham> getListByIdSanPham(Integer idSanPham) {
+        return repository.getListByIdSanPham(idSanPham);
+    }
+
+//    @Override
+//    public List<ChiTietSanPham> getListSPByMSandKT(Integer idSanPham, Integer idMauSac, Integer idKichThuoc) {
+//        return repository.getListSPByMSandKT(idSanPham, idMauSac, idKichThuoc);
+//    }
+
+
 }

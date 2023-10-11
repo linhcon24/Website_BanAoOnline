@@ -75,13 +75,12 @@
                                 </div>
                                 <h6 class="text-success">Free shipping</h6>
                                 <div class="d-flex flex-column mt-4">
-
-                                        <button class="btn btn-primary btn-sm" type="button">Details</button>
-                                    <form action="${pageContext.request.contextPath }/product/add-to-cart" method="post">
-                                        <button class="btn btn-outline-primary btn-sm mt-2" type="submit" >
-                                            Add to wishlist
-                                        </button>
-                                    </form>
+                                    <a href="${pageContext.request.contextPath }/product/detail?id=${sanPham.idsanpham}" class="btn btn-primary btn-sm" type="submit">Details</a>
+<%--                                    <form action="${pageContext.request.contextPath }/product/add-to-cart" method="post">--%>
+<%--                                        <button class="btn btn-outline-primary btn-sm mt-2" type="submit" >--%>
+<%--                                            Add to wishlist--%>
+<%--                                        </button>--%>
+<%--                                    </form>--%>
                                 </div>
                             </div>
                         </div>

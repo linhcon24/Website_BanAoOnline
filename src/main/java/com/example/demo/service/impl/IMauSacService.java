@@ -1,6 +1,7 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.entity.MauSac;
+import com.example.demo.entity.MauSacViewModel;
 import com.example.demo.repository.MauSacRepository;
 import com.example.demo.service.MauSacService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,5 +62,10 @@ public class IMauSacService implements MauSacService {
     @Override
     public MauSac getByIdMS(Integer id) {
         return repository.getById(id);
+    }
+
+    @Override
+    public List<MauSacViewModel> getListMauSacBySP(Integer idSanPham) {
+        return repository.getListMauSacByIdSanPham(idSanPham);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.KichThuoc;
+import com.example.demo.entity.KichThuocViewModel;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -15,4 +16,5 @@ public interface KichThuocService {
     public KichThuoc update(KichThuoc kichThuoc);
     public KichThuoc delete(KichThuoc kichThuoc);
     public KichThuoc getByIdKT(Integer id);
+    public List<KichThuocViewModel> getListKichThuocBySP(Integer idSanPham);
 }

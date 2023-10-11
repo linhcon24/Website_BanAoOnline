@@ -1,6 +1,7 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.entity.KichThuoc;
+import com.example.demo.entity.KichThuocViewModel;
 import com.example.demo.repository.KichThuocRepository;
 import com.example.demo.service.KichThuocService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,5 +62,10 @@ public class IKichThuocService implements KichThuocService {
     @Override
     public KichThuoc getByIdKT(Integer id) {
         return repository.getById(id);
+    }
+
+    @Override
+    public List<KichThuocViewModel> getListKichThuocBySP(Integer idSanPham) {
+        return repository.getListKichThuocByIdSanPham(idSanPham);
     }
 }

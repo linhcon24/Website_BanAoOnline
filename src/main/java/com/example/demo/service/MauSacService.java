@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.MauSac;
+import com.example.demo.entity.MauSacViewModel;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -16,4 +17,5 @@ public interface MauSacService {
     public MauSac update(MauSac mauSac);
     public MauSac delete(MauSac mauSac);
     public MauSac getByIdMS(Integer id);
+    public List<MauSacViewModel> getListMauSacBySP(Integer idSanPham);
 }

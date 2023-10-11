@@ -86,6 +86,12 @@
                        value="/views/product.jsp"/>
     </definition>
 
+    <definition name="detailProduct" extends="base.definition">
+        <put-attribute name="title" value="Detail Product"/>
+        <put-attribute name="body"
+                       value="/views/detail.jsp"/>
+    </definition>
+
     <!--	//Admin-->
     <definition name="adminDashboard" extends="baseAD.definition">
         <put-attribute name="title-admin" value="Admin Page"/>
