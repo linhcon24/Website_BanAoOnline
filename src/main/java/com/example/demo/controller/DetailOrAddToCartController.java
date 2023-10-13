@@ -53,42 +53,37 @@ public class DetailOrAddToCartController {
     }
 
     @PostMapping("/add-to-cart")
-    public String AddToCart(RedirectAttributes redirect,
-                            @RequestParam(name = "id") Integer idSanPham,
-                            @RequestParam(name = "mauSac") Integer idMauSac,
-                            @RequestParam(name = "kichThuoc") Integer idKichThuoc,
-                            @RequestParam(name = "soLuong") Integer soLuong){
+    public String AddToCart(Model model,
+                            RedirectAttributes redirect,
+                            @RequestParam(name = "idSanPham") Integer idSanPham,
+                            @RequestParam(name = "idCTSP") Integer idCTSP){
         TaiKhoan taiKhoan = (TaiKhoan) session.getAttribute("account");
         if (taiKhoan == null){
-            return "loginPage";
+            redirect.addFlashAttribute("message", "Vui lòng đăng nhập");
+            redirect.addFlashAttribute("type", "success");
+            return "redirect:/login";
         }
 
-//        listChiTietSanPham = chiTietSanPhamService.getListSPByMSandKT(idSanPham,idMauSac,idKichThuoc);
         listGioHangChiTiet = gioHangChiTietService.count(taiKhoan.getIdtaikhoan());
 
-        if (listChiTietSanPham == null){
-            redirect.addFlashAttribute("message", "Sản phẩm hiện đã hết hàng");
-            redirect.addFlashAttribute("type", "success");
-            return "redirect:/product";
-        }
-
-        if (listChiTietSanPham.get(0).getSoluong() < soLuong){
-            redirect.addFlashAttribute("message", "Sản phẩm không đú số lượng");
-            redirect.addFlashAttribute("type", "success");
-            return "redirect:/product";
+        for (GioHangChiTiet o: listGioHangChiTiet){
+            if (o.getChiTietSanPham() == chiTietSanPhamService.getByIdCTSP(idCTSP)){
+                redirect.addFlashAttribute("message", "Sản phẩm hiện đã có trong giỏ hàng");
+                redirect.addFlashAttribute("type", "success");
+                return "redirect:/product";
+            }
         }
 
 
-
-            GioHangChiTiet gioHangChiTiet = new GioHangChiTiet();
-            gioHangChiTiet.setChiTietSanPham(listChiTietSanPham.get(0));
-            gioHangChiTiet.setDongia(listChiTietSanPham.get(0).getGiaban().doubleValue());
-            gioHangChiTiet.setSoluong(soLuong);
-            gioHangChiTiet.setGiamgia(null);
-            gioHangChiTiet.setGioHang(listGioHangChiTiet.get(0).getGioHang());
-            redirect.addFlashAttribute("message", "Sản phẩm đã được thêm vào giỏ hàng");
-            redirect.addFlashAttribute("type", "success");
-            return "cartPage";
-
+        GioHangChiTiet gioHangChiTiet = new GioHangChiTiet();
+        gioHangChiTiet.setChiTietSanPham(chiTietSanPhamService.getByIdCTSP(idCTSP));
+        gioHangChiTiet.setDongia(listChiTietSanPham.get(0).getGiaban().doubleValue());
+        gioHangChiTiet.setSoluong(1);
+        gioHangChiTiet.setGiamgia(null);
+        gioHangChiTiet.setGioHang(listGioHangChiTiet.get(0).getGioHang());
+        gioHangChiTietService.add(gioHangChiTiet);
+        redirect.addFlashAttribute("message", "Sản phẩm đã được thêm vào giỏ hàng");
+        redirect.addFlashAttribute("type", "success");
+        return "redirect:/cart";
     }
 }

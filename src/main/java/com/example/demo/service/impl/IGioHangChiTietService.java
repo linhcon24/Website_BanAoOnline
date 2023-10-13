@@ -53,4 +53,14 @@ public class IGioHangChiTietService implements GioHangChiTietService {
     public GioHangChiTiet getByIdGHCT(UUID id) {
         return repository.getById(id);
     }
+
+    @Override
+    public Double getTotalMoney(List<GioHangChiTiet> listGHCT) {
+        Double totalMoney = 0.0;
+        for (GioHangChiTiet o : listGHCT){
+            totalMoney+= o.getDongia() * o.getSoluong();
+        }
+        return totalMoney;
+    }
+
 }

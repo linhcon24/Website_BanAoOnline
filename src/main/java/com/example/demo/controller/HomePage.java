@@ -174,6 +174,8 @@ public class HomePage {
     public String cart(Model model,@RequestParam(defaultValue = "0",name = "num")Integer num){
         TaiKhoan tk = (TaiKhoan) session.getAttribute("account");
         listGioHangChiTiet = gioHangChiTietService.getAll(num, 4, tk.getIdtaikhoan());
+        Double totalMoney = gioHangChiTietService.getTotalMoney(gioHangChiTietService.count(tk.getIdtaikhoan()));
+        model.addAttribute("totalMoney",totalMoney);
         model.addAttribute("listGioHangChiTiet",listGioHangChiTiet);
         return "cartPage";
     }

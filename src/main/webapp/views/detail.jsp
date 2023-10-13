@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <form action="${pageContext.request.contextPath }/product/add-to-cart?id=${ctsp.sanPham.idsanpham}&mauSac=${mauSac.id}&kichThuoc=${kichThuoc.id}&soLuong=${soLuong}" method="post">
+                        <form action="${pageContext.request.contextPath}/product/add-to-cart?idSanPham=${ctsp.sanPham.idsanpham}" method="post">
                         <div class="product p-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span class="ml-1">Back</span> </div> <i class="fa fa-shopping-cart text-muted"></i>
@@ -48,18 +48,10 @@
                             </div>
                             <p class="about">Shop from a wide range of t-shirt from orianz. Pefect for your everyday use, you could pair it with a stylish pair of jeans or trousers complete the look.</p>
                             <div class="sizes mt-5">
-                                <h6 class="text-uppercase">Màu Sắc</h6>
-                                <c:forEach items="${listMauSac}" var="mauSac">
-                                     <label class="radio"> <input type="radio" name="mauSac" value="${mauSac.id}" checked> <span>${mauSac.ten}</span> </label>
+                                <h6>Các loại</h6>
+                                <c:forEach items="${list}" var="chiTietSanPham">
+                                    <label class="radio"> <input type="radio" name="idCTSP" value="${chiTietSanPham.idctsp}" checked ><span>${chiTietSanPham.mauSac.tenmausac} - ${chiTietSanPham.kichThuoc.tenkichthuoc}</span></label>
                                 </c:forEach>
-                                <h6 class="text-uppercase">Kích thước</h6>
-                                <select class="form-select" aria-label="Default select example" name = "kichThuoc">
-                                    <c:forEach items="${listKichThuoc}" var="kichThuoc">
-                                        <option value="${kichThuoc.id}">${kichThuoc.ten}</option>
-                                    </c:forEach>
-                                </select>
-                                <h6 class="text-uppercase">Số lượng</h6>
-                                <input type="number" aria-valuemin="1" name="soLuong" value="${soLuong}">
                             </div>
                             <div class="cart mt-4 align-items-center"> <button class="btn btn-danger text-uppercase mr-2 px-4" type="submit">Add to cart</button> <i class="fa fa-heart text-muted"></i> <i class="fa fa-share-alt text-muted"></i> </div>
                         </div>

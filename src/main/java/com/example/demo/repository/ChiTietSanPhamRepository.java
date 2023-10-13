@@ -22,6 +22,6 @@ public interface ChiTietSanPhamRepository extends JpaRepository<ChiTietSanPham, 
     @Query(value = "Select e from ChiTietSanPham e where e.trangthai = 0 and e.sanPham.idsanpham =:idsanpham")
     List<ChiTietSanPham> getListByIdSanPham(@Param("idsanpham") Integer idSanPham);
 
-//    @Query(value = "Select e from ChiTietSanPham e where e.trangthai = 0 and e.sanPham.idsanpham =:idsanpham and e.mauSac.idmausac =: idmausac and e.kichThuoc.idkichthuoc =: idkichthuoc ")
-//    List<ChiTietSanPham> getListSPByMSandKT(@Param("idsanpham") Integer idSanPham, @Param("idmausac") Integer idMauSac, @Param("idkichthuoc") Integer idKichThuoc);
+    @Query(value = "Select e from ChiTietSanPham e where e.trangthai = 0 and e.sanPham.idsanpham =:idsanpham and e.mauSac.idmausac =:idmausac and e.kichThuoc.idkichthuoc =:idkichthuoc ")
+    List<ChiTietSanPham> getListSPByMSandKT(@Param("idsanpham") Integer idSanPham, @Param("idmausac") Integer idMauSac, @Param("idkichthuoc") Integer idKichThuoc);
 }

@@ -65,10 +65,10 @@ public class IChiTietSanPhamService implements ChiTietSanPhamService {
         return repository.getListByIdSanPham(idSanPham);
     }
 
-//    @Override
-//    public List<ChiTietSanPham> getListSPByMSandKT(Integer idSanPham, Integer idMauSac, Integer idKichThuoc) {
-//        return repository.getListSPByMSandKT(idSanPham, idMauSac, idKichThuoc);
-//    }
+    @Override
+    public List<ChiTietSanPham> getListSPByMSandKT(Integer idSanPham, Integer idMauSac, Integer idKichThuoc) {
+        return repository.getListSPByMSandKT(idSanPham, idMauSac, idKichThuoc);
+    }
 
 
 }
