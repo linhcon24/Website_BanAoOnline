@@ -63,4 +63,13 @@ public class IGioHangChiTietService implements GioHangChiTietService {
         return totalMoney;
     }
 
+    @Override
+    public Integer getTotalProduct(List<GioHangChiTiet> listGHCT) {
+        Integer count = 0;
+        for (GioHangChiTiet o: listGHCT){
+            count++;
+        }
+        return count;
+    }
+
 }

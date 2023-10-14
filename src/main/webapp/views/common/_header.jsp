@@ -59,7 +59,7 @@
                         </a></div>
                     <button class="nut"><a class="nav-link menu" href="${pageContext.request.contextPath }/cart"><i
                             class="fa-solid fa-cart-plus"></i>
-                        <p class="soluong"></p><sup style="color: red">0</sup></a>
+                        <p class="soluong"></p><sup style="color: yellow">${totalProduct}</sup></a>
 
                     </button>
                     <button class="nuthan dropdown show">

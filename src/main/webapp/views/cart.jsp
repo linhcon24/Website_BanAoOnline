@@ -53,7 +53,7 @@
                                 <div class="p-5">
                                     <div class="d-flex justify-content-between align-items-center mb-5">
                                         <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
-                                        <h6 class="mb-0 text-muted">3 items</h6>
+                                        <h6 class="mb-0 text-muted">${totalProduct} sản phẩm</h6>
                                     </div>
                                     <hr class="my-4">
                                     <c:forEach items="${listGioHangChiTiet.content}" var="gioHangChiTiet">
@@ -95,8 +95,7 @@
                                     <hr class="my-4">
 
                                     <div class="d-flex justify-content-between mb-4">
-                                        <h5 class="text-uppercase">items 3</h5>
-                                        <h5>€ 132.00</h5>
+                                        <h5 class="text-uppercase">Tổng sản phẩm: ${totalProduct}</h5>
                                     </div>
 
                                     <h5 class="text-uppercase mb-3">Shipping</h5>

@@ -16,4 +16,5 @@ public interface GioHangChiTietService {
     public GioHangChiTiet delete(GioHangChiTiet gioHangChiTiet);
     public GioHangChiTiet getByIdGHCT(UUID id);
     public Double getTotalMoney(List<GioHangChiTiet> listGHCT);
+    public Integer getTotalProduct(List<GioHangChiTiet> listGHCT);
 }

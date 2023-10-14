@@ -47,7 +47,6 @@ public class HomePage {
 
     @RequestMapping(value = {"", "/", "/index", "/home"})
     public String homePage(Model model) {
-        model.addAttribute("mess", "Hello Ha");
         return "homePage";
     }
 
@@ -175,7 +174,9 @@ public class HomePage {
         TaiKhoan tk = (TaiKhoan) session.getAttribute("account");
         listGioHangChiTiet = gioHangChiTietService.getAll(num, 4, tk.getIdtaikhoan());
         Double totalMoney = gioHangChiTietService.getTotalMoney(gioHangChiTietService.count(tk.getIdtaikhoan()));
+        Integer totalProduct = gioHangChiTietService.getTotalProduct(gioHangChiTietService.count(tk.getIdtaikhoan()));
         model.addAttribute("totalMoney",totalMoney);
+        model.addAttribute("totalProduct",totalProduct);
         model.addAttribute("listGioHangChiTiet",listGioHangChiTiet);
         return "cartPage";
     }
