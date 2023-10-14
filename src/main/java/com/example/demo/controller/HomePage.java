@@ -92,7 +92,7 @@ public class HomePage {
                 redirect.addFlashAttribute("type", "success");
                 return "redirect:/index";
             }
-            model.addAttribute("message", "Username or Password incorrect !");
+            model.addAttribute("message", "Username or Password incorrect!");
             model.addAttribute("type", "error");
             return "loginPage";
         }

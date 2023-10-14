@@ -60,7 +60,7 @@ public class DetailOrAddToCartController {
         TaiKhoan taiKhoan = (TaiKhoan) session.getAttribute("account");
         if (taiKhoan == null){
             redirect.addFlashAttribute("message", "Vui lòng đăng nhập");
-            redirect.addFlashAttribute("type", "success");
+            redirect.addFlashAttribute("type", "error");
             return "redirect:/login";
         }
 
@@ -69,7 +69,7 @@ public class DetailOrAddToCartController {
         for (GioHangChiTiet o: listGioHangChiTiet){
             if (o.getChiTietSanPham() == chiTietSanPhamService.getByIdCTSP(idCTSP)){
                 redirect.addFlashAttribute("message", "Sản phẩm hiện đã có trong giỏ hàng");
-                redirect.addFlashAttribute("type", "success");
+                redirect.addFlashAttribute("type", "error");
                 return "redirect:/product";
             }
         }

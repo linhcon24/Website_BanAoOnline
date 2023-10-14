@@ -19,7 +19,7 @@
             <i class="fas fa-laugh-wink"></i>
             <%--<i class="fa-solid fa-gauge"></i>--%>
         </div>
-        <div class="sidebar-brand-text mx-3"> Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3"> Trang Quản Trị <sup>2</sup></div>
     </a>
 
     <!-- Divider -->
@@ -29,7 +29,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="/admin/dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Trang Chủ</span></a>
     </li>
 
     <!-- Divider -->
@@ -45,7 +45,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
            aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Trang Quản Trị</span>
+            <span>Quản Lý</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
