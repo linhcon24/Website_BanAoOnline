@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.bean.ChangeForm;
+import com.example.demo.bean.*;
 import com.example.demo.entity.ChiTietSanPham;
 import com.example.demo.entity.GioHangChiTiet;
 import com.example.demo.entity.SanPham;
@@ -11,9 +11,6 @@ import com.example.demo.service.SanPhamService;
 import com.example.demo.service.TaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import com.example.demo.bean.ForgetForm;
-import com.example.demo.bean.LoginForm;
-import com.example.demo.bean.RegisterForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -187,5 +184,13 @@ public class HomePage {
         listSanPham = sanPhamService.getAll(num,4);
         model.addAttribute("list",listSanPham);
         return "productPage";
+    }
+
+    @GetMapping("/profile")
+
+    public String getProfile(Model model){
+        model.addAttribute("pro" , new ThongTinForm());
+        return"/profile";
+
     }
 }
