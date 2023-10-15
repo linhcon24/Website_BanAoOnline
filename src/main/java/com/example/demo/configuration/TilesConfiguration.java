@@ -12,7 +12,7 @@ public class TilesConfiguration {
 	@Bean
 	public TilesConfigurer tilesConfigurer() {
 		TilesConfigurer tilesConfigurer = new TilesConfigurer();
-		String[] defs = { "views/tiles.xml" };
+		String[] defs = { "tiles.xml" };
 		tilesConfigurer.setDefinitions(defs);
 		return tilesConfigurer;
 	}

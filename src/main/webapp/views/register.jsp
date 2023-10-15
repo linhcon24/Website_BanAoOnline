@@ -21,13 +21,19 @@
                             <div class="card-body p-4 p-lg-5 text-black">
 
                                 <%--@elvariable id="data" type="java"--%>
-                                <f:form action="register" method="post" modelAttribute="data"
+                                <f:form action="register" method="post" modelAttribute="register"
                                       enctype="multipart/form-data">
 
                                     <div class="d-flex align-items-center mb-3 pb-1">
                                         <span class="h1 fw-bold mb-0"> <h1 class="giua"><i
                                                 class="fa-solid fa-square-plus"></i> Đăng ký </h1></span>
                                     </div>
+
+                                    <div class="form-group">
+                                            <%--@declare id="exampleformcontrolfile1"--%><label for="exampleFormControlFile1"> Image <span style="color:red">*</span> :</label> <input
+                                            type="file" class="form-control-file" id="fileUpload" name="file" />
+                                    </div>
+                                    <br>
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="form2Example17"><i class="fa-solid fa-user"></i>
                                             Tài khoản</label>
@@ -80,5 +86,9 @@
     </div>
 </section>
 </c:if>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>

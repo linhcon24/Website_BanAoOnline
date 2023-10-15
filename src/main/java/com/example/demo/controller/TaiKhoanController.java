@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -51,7 +52,7 @@ public class TaiKhoanController {
     }
 
     @PostMapping("/add")
-    public String addTH(Model model, RedirectAttributes redirect, @ModelAttribute(name = "tk") TaiKhoanForm form,
+    public String addTH(Model model, RedirectAttributes redirect,@Valid @ModelAttribute(name = "tk") TaiKhoanForm form,
                         BindingResult result, @RequestParam(name = "file") MultipartFile file) {
         if (result.hasErrors()) {
             return "adminAccAdd";

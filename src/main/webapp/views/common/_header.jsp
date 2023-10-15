@@ -74,7 +74,7 @@
                                 <div class="dropdown-menu drop" aria-labelledby="dropdownMenuLink">
                                     <div class="nutdrop">
                                         <a class="dropdown-item"
-                                           href="${pageContext.request.contextPath}/profile">Profile</a>
+                                           href="${pageContext.request.contextPath}/profile/${account.idtaikhoan}">Profile</a>
                                         <a class="dropdown-item" href="${pageContext.request.contextPath}/change">Đổi mật
                                             khẩu</a>
                                         <a class="dropdown-item" href="#" onclick="dangXuat()">Logout</a>

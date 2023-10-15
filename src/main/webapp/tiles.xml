@@ -50,6 +50,22 @@
                        value="/views/forget.jsp"/>
 
     </definition>
+
+    <definition name="profilePage" extends="base.definition">
+        <put-attribute name="title" value="Profile" />
+        <put-attribute name="body"
+                       value="/views/thongtin/profile.jsp" />
+
+    </definition>
+
+    <definition name="profileUpdatePage" extends="base.definition">
+        <put-attribute name="title" value="Update Profile" />
+        <put-attribute name="body"
+                       value="/views/thongtin/update.jsp" />
+
+    </definition>
+
+
     <definition name="loginPage" extends="base.definition">
         <put-attribute name="title" value="Login Page"/>
         <put-attribute name="body"
@@ -92,11 +108,7 @@
                        value="/views/detail.jsp"/>
     </definition>
 
-    <definition name="profilePage" extends="base.definition">
-        <put-attribute name="title" value="Profile"/>
-        <put-attribute name="body"
-                       value="/views/profile.jsp"/>
-    </definition>
+
 
     <!--	//Admin-->
     <definition name="adminDashboard" extends="baseAD.definition">

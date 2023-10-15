@@ -10,18 +10,28 @@ import com.example.demo.service.GioHangChiTietService;
 import com.example.demo.service.SanPhamService;
 import com.example.demo.service.TaiKhoanService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Controller
 public class HomePage {
+
+
+    @Value("${upload.path}")
+    private String pathFolder;
 
     @Autowired
     HttpSession session;
@@ -72,7 +82,7 @@ public class HomePage {
     }
 
     @PostMapping("/login")
-    public String login(Model model, RedirectAttributes redirect, @ModelAttribute("data") LoginForm form,
+    public String login(Model model, RedirectAttributes redirect,@Valid @ModelAttribute("data") LoginForm form,
                         BindingResult result) {
         String username = form.getUsername();
         String password = form.getPassword();
@@ -99,21 +109,21 @@ public class HomePage {
 
     @GetMapping("/register")
     public String register(Model model) {
-        model.addAttribute("data" , new RegisterForm());
+        model.addAttribute("register" , new RegisterForm());
         return "registerPage";
     }
 
     @PostMapping("/register")
-    public String addRegister(Model model, RedirectAttributes redirect,
-                               @ModelAttribute("data") RegisterForm form, BindingResult result, HttpServletRequest request) {
+    public String addRegister(Model model, RedirectAttributes redirect,@RequestParam(name = "file") MultipartFile file,
+                             @Valid  @ModelAttribute("register") RegisterForm form, BindingResult result, HttpServletRequest request) {
         String username = form.getUsername();
         String password = form.getPassword();
         String repassword = form.getRePassword();
         String email = form.getEmail();
+
         if (result.hasErrors()) {
             return "registerPage";
         }
-        if (!result.hasErrors()) {
             if (taiKhoanService.getByUsername(form.getUsername()) != null) {
                 request.setAttribute("message", "Username đã tồn tại trên hệ thống !");
                 request.setAttribute("type", "error");
@@ -130,21 +140,34 @@ public class HomePage {
                 return "registerPage";
             }
 
-            TaiKhoan account = new TaiKhoan();
-            account.setUsername(username);
-            account.setPassword(password);
-            account.setEmail(email);
-            account.setVaitro(1);
-            account.setTrangthai(0);
-
-            if (taiKhoanService.add(account) != null) {
-
-                redirect.addFlashAttribute("message" , "Đăng ký thành công !");
-                redirect.addFlashAttribute("type", "success");
-                return "redirect:/register";
+            if (file.isEmpty()) {
+                redirect.addFlashAttribute("message", " Vui lòng tải ảnh sản phẩm lên !");
+                redirect.addFlashAttribute("type", "error");
+                return "registerPage";
             }
 
-        }
+            try {
+                if (!file.isEmpty()) {
+                    byte[] bytes;
+                    bytes = file.getBytes();
+                    Path path = Paths.get(pathFolder + file.getOriginalFilename());
+                    Files.write(path, bytes);
+
+                    TaiKhoan account = form.data(null);
+                    account.setTrangthai(0);
+                    account.setVaitro(1);
+                    if (taiKhoanService.add(account) != null) {
+                        redirect.addFlashAttribute("message" , "Đăng ký thành công !");
+                        redirect.addFlashAttribute("type", "success");
+                        return "redirect:/login";
+                    }
+                }
+
+            }
+            catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
+            }
         return "registerPage";
 
     }
@@ -186,11 +209,64 @@ public class HomePage {
         return "productPage";
     }
 
-    @GetMapping("/profile")
-
-    public String getProfile(Model model){
-        model.addAttribute("pro" , new ThongTinForm());
-        return"/profile";
+    @GetMapping("/profile/{id}")
+    public String getProfile(Model model, @PathVariable("id") Integer id){
+        TaiKhoan user = taiKhoanService.getAccountById(id);
+        model.addAttribute("account" , user);
+        model.addAttribute("pro", new ThongTinForm());
+        return"profilePage";
 
     }
+
+    @GetMapping("/profile/edit/{id}")
+    public String getEdit(Model model, @PathVariable("id") Integer id){
+        TaiKhoan user = taiKhoanService.getAccountById(id);
+        model.addAttribute("account" , user);
+        model.addAttribute("edit", new ThongTinForm());
+        return"profileUpdatePage";
+
+    }
+
+
+    @PostMapping("/profile/edit")
+    public String edit(Model model, RedirectAttributes redirect, @ModelAttribute(name = "edit") ThongTinForm form,
+                       BindingResult result, @RequestParam(name = "file") MultipartFile file, HttpServletRequest request){
+        if (result.hasErrors()) {
+            return "profilePage";
+        }
+        //Khong loi
+        if (!result.hasErrors()) {
+            try {
+                TaiKhoan account = taiKhoanService.getAccountById(form.getIdtaikhoan());
+                TaiKhoan acc = form.data(account);
+                String anh = "";
+                if (file.isEmpty()) {
+                    anh = acc.getImage();
+                } else {
+                    anh = file.getOriginalFilename();
+                    byte[] bytes;
+
+                    bytes = file.getBytes();
+
+                    Path path = Paths.get(pathFolder + file.getOriginalFilename());
+                    Files.write(path, bytes);
+                }
+                acc.setImage(anh);
+                acc.setTrangthai(0);
+                acc.setVaitro(1);
+                if (taiKhoanService.update(acc) != null) {
+                    request.setAttribute("message", "Sửa thành công !");
+                    request.setAttribute("type", "success");
+                    return "profilePage";
+                }
+            } catch (Exception e) {
+                // TODO: handle exception
+                e.printStackTrace();
+            }
+        }
+
+        return "profileUpdatePage";
+    }
+
+
 }
