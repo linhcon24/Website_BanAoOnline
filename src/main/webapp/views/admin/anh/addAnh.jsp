@@ -17,19 +17,19 @@
         <f:errors style="color:red" path="tenimage" element="div"></f:errors>
 
         <label for="exampleInputImage1"> Ảnh 1 <span style="color:red">*</span> :</label>
-        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile"/>
+        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile" accept=".png, .jpg, .jpeg, .gif, .svg"/>
         <f:errors style="color:red" path="imageurl1" element="div"></f:errors>
 
         <label for="exampleInputImage1"> Ảnh 2 <span style="color:red">*</span> :</label>
-        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile"/>
+        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile" accept=".png, .jpg, .jpeg, .gif, .svg/">
         <f:errors style="color:red" path="imageurl2" element="div"></f:errors>
 
         <label for="exampleInputImage1"> Ảnh 3 <span style="color:red">*</span> :</label>
-        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile"/>
+        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile" accept=".png, .jpg, .jpeg, .gif, .svg"/>
         <f:errors style="color:red" path="imageurl3" element="div"></f:errors>
 
         <label for="exampleInputImage1"> Ảnh 4 <span style="color:red">*</span> :</label>
-        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile"/>
+        <input type="file" class="form-control" id="exampleInputImage1" name="imageFile" accept=".png, .jpg, .jpeg, .gif, .svg"/>
         <f:errors style="color:red" path="imageurl4" element="div"></f:errors>
         <br>
         <button type="submit" class="btn btn-danger"><i class="fa-solid fa-plus"></i> Thêm</button>

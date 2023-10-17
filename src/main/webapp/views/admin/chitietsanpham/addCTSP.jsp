@@ -34,7 +34,6 @@
 
         <label for="sanPham">Chọn Sản Phẩm:</label>
         <select class="form-control" id="sanPham" name="sanPham.idsanpham">
-            <option value="">-- Chọn Sản Phẩm --</option>
             <c:forEach items="${sanPhamList}" var="sanPham">
                 <option value="${sanPham.idsanpham}">${sanPham.tensanpham}</option>
             </c:forEach>
@@ -42,7 +41,6 @@
 
         <label for="kieuDang">Chọn Kiểu Dáng:</label>
         <select class="form-control" id="kieuDang" name="kieuDang.idkieudang">
-            <option value="">-- Chọn Kiểu Dáng --</option>
             <c:forEach items="${kieuDangList}" var="kieuDang">
                 <option value="${kieuDang.idkieudang}">${kieuDang.tenkieudang}</option>
             </c:forEach>
@@ -50,7 +48,6 @@
 
         <label for="kichThuoc">Chọn Kích Thước:</label>
         <select class="form-control" id="kichThuoc" name="kichThuoc.idkichthuoc">
-            <option value="">-- Chọn Kích Thước --</option>
             <c:forEach items="${kichThuocList}" var="kichThuoc">
                 <option value="${kichThuoc.idkichthuoc}">${kichThuoc.tenkichthuoc}</option>
             </c:forEach>
@@ -58,7 +55,6 @@
 
         <label for="chatLieu">Chọn Chất Liệu:</label>
         <select class="form-control" id="chatLieu" name="chatLieu.idchatlieu">
-            <option value="">-- Chọn Chất Liệu --</option>
             <c:forEach items="${chatLieuList}" var="chatLieu">
                 <option value="${chatLieu.idchatlieu}">${chatLieu.tenchatlieu}</option>
             </c:forEach>
@@ -66,7 +62,6 @@
 
         <label for="mauSac">Chọn Màu Sắc:</label>
         <select class="form-control" id="mauSac" name="mauSac.idmausac">
-            <option value="">-- Chọn Màu Sắc --</option>
             <c:forEach items="${mauSacList}" var="mauSac">
                 <option value="${mauSac.idmausac}">${mauSac.tenmausac}</option>
             </c:forEach>
@@ -74,7 +69,6 @@
 
         <label for="khuyenMai">Chọn Khuyến Mãi:</label>
         <select class="form-control" id="khuyenMai" name="khuyenMai.idkhuyenmai">
-            <option value="">-- Chọn Khuyến Mãi --</option>
             <c:forEach items="${khuyenMaiList}" var="khuyenMai">
                 <option value="${khuyenMai.idkhuyenmai}">${khuyenMai.tenkhuyenmai}</option>
             </c:forEach>
@@ -82,7 +76,6 @@
 
         <label for="anh">Chọn Ảnh:</label>
         <select class="form-control" id="anh" name="anh.idimage">
-            <option value="">-- Chọn Ảnh --</option>
             <c:forEach items="${anhList}" var="anh">
                 <option value="${anh.idimage}">${anh.tenimage}</option>
             </c:forEach>
@@ -90,7 +83,6 @@
 
         <label for="thuongHieu">Chọn Thương Hiệu:</label>
         <select class="form-control" id="thuongHieu" name="thuongHieu.idthuonghieu">
-            <option value="">-- Chọn Thương Hiệu --</option>
             <c:forEach items="${thuongHieuList}" var="thuongHieu">
                 <option value="${thuongHieu.idthuonghieu}">${thuongHieu.tenthuonghieu}</option>
             </c:forEach>
@@ -98,7 +90,6 @@
 
         <label for="nhaCungCap">Chọn Nhà Cung Cấp:</label>
         <select class="form-control" id="nhaCungCap" name="nhaCungCap.idnhacungcap">
-            <option value="">-- Chọn Nhà Cung Cấp --</option>
             <c:forEach items="${nhaCungCapList}" var="nhaCungCap">
                 <option value="${nhaCungCap.idnhacungcap}">${nhaCungCap.tennhacungcap}</option>
             </c:forEach>

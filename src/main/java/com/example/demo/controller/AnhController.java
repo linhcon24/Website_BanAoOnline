@@ -60,12 +60,12 @@ public class AnhController {
             uploadDir = uploadDir.replace("\\\\", "\\");
             System.out.println(uploadDir);
             for (MultipartFile imageFile : imageFiles) {
-                if (!isImageFormatValid(imageFile)) {
-                    // Định dạng không hợp lệ, xử lý lỗi tại đây
-                    redirect.addFlashAttribute("message", "Định dạng tệp ảnh không hợp lệ.");
-                    redirect.addFlashAttribute("type", "error");
-                    return "redirect:/admin/anhs/add";
-                }
+//                if (!isImageFormatValid(imageFile)) {
+//                    // Định dạng không hợp lệ, xử lý lỗi tại đây
+//                    redirect.addFlashAttribute("message", "Định dạng tệp ảnh không hợp lệ.");
+//                    redirect.addFlashAttribute("type", "error");
+//                    return "redirect:/admin/anhs/add";
+//                }
                 // Lưu file vào thư mục trong webapp/views/admin/img
                 String fileName = imageFile.getOriginalFilename();
                 try {
@@ -114,12 +114,12 @@ public class AnhController {
             uploadDir = uploadDir.replace("\\\\", "\\");
             System.out.println(uploadDir);
             for (MultipartFile imageFile : imageFiles) {
-                if (!isImageFormatValid(imageFile)) {
-                    // Định dạng không hợp lệ, xử lý lỗi tại đây
-                    redirect.addFlashAttribute("message", "Định dạng tệp ảnh không hợp lệ.");
-                    redirect.addFlashAttribute("type", "error");
-                    return "redirect:/admin/anhs/update";
-                }
+//                if (!isImageFormatValid(imageFile)) {
+//                    // Định dạng không hợp lệ, xử lý lỗi tại đây
+//                    redirect.addFlashAttribute("message", "Định dạng tệp ảnh không hợp lệ.");
+//                    redirect.addFlashAttribute("type", "error");
+//                    return "redirect:/admin/anhs/update";
+//                }
                 // Lưu file vào thư mục trong webapp/views/admin/img
                 String fileName = imageFile.getOriginalFilename();
                 try {
