@@ -119,16 +119,22 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="charts">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
+        <a class="nav-link" href="/admin/hoa-don">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>Hóa đơn</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="tables">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+        <a class="nav-link" href="/admin/thong-ke">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Thống kê</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/index">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Quay lại trang chủ </span></a>
     </li>
 
     <!-- Nav Item - Tables -->
